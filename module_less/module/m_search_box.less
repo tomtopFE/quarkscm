@@ -1,0 +1,69 @@
+/********** 首页顶部搜索框 **********
+
+作    者:wxl
+
+时    间:20170712
+
+修 改 人:wxl
+
+修改时间：20170712
+
+********** 首页顶部搜索框 **********/
+//a链接颜色
+@cLink01:#4d82b8;
+.m_search_box{
+	    display:inline-block;vertical-align:middle;
+        .search_wrap{position:relative;.lineBlockBoxs;width:557px;
+			input[type=text]{
+				width:490px;.border;border-right:none;margin:0;height:38px;line-height:36px;padding:0 10px;outline: none;
+			}
+			.search_btn{background:@whole;text-decoration:none;width:44px;border-radius:0px 5px 5px 0;padding:0;height:40px;line-height:36px;color:#fff;text-align:center;cursor:pointer;.btnOpacity;outline: none;
+                i{line-height:40px;font-size:24px}
+                &:hover{color:#fff;.btnHoverOpacity;box-shadow: none;
+					-moz-box-shadow: none;
+					-webkit-box-shadow: none;}
+			}
+		}
+		.bm_option{
+			width:140px;margin:0 -1px;
+            .result{height:38px;line-height:36px;background-color:@cGrey05;border-radius:4px 0 0 4px;
+                 .icon_arr_bottom{line-height:36px;height:38px}
+                 em{.strLen;color:#333;width:111px;display:inline-block}
+            }
+            .option_list{
+            	.bgf;top:37px;width:183px;z-index:100;padding:6px 0;
+            }
+		}
+		.search_hot{height:23px;margin-top:7px;overflow:hidden;line-height:23px;max-width:920px;font-size: 12px;
+			 a{
+                &:hover{text-decoration:underline;}
+             }
+             span{padding-right:5px;}
+		}
+		/*联想搜索以及历史搜索*/
+		.m_search_help{
+            display:none;width:416px;position:absolute;top:37px;left:138px;z-index:100;
+            li{
+            	height:26px;line-height:26px;padding:0 10px;cursor:pointer;
+            	&:hover{background:@cGrey05;}
+                &.active{background:#f5f5f5;}
+            	strong{color:@ac}
+            }
+            #searchThink{padding-bottom:5px;.border;.bgf;}
+            #recent_search{
+                padding-bottom:5px;.border;.bgf;
+            	.hd{height:32px;line-height:32px;.border_b;margin:0 10px;font-size:14px;color:#333;font-weight:bold}
+            	.clear_hiss{.fr;font-weight:normal;cursor:pointer;text-decoration:underline;font-size:12px;}
+            	ul{padding-top:8px;}
+            	li{
+            		position:relative;
+                    strong{display:block;margin-right:40px;}
+            		.icon_cross{position:absolute;right:10px;top:0;height:26px;line-height:26px;cursor:pointer;display: none}
+                    &:hover{
+                        .icon_cross{display:block}
+                    }
+            	}
+            }
+
+		}
+}

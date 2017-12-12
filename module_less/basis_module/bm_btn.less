@@ -1,0 +1,129 @@
+/********** 按钮 **********
+
+作    者:lijianhui
+
+时    间:2016-08-13
+
+注:此文件修改需要团队评审
+
+修 改 人:lijianhui
+
+修改时间:2016-08-13
+
+修改说明:xxx
+
+********** 按钮 **********/
+//正常
+	.bm_btn{*width:90px; display:inline-block; width:auto; min-width:90px; height:38px; padding:0 10px; text-align:center; font-size:12px; line-height:38px; color:#fff; border-radius:2px; background-color:@c;text-transform:capitalize;border:none;
+		// &:hover{background-color:@c01;}
+		&[disabled]{
+			background-color:@c;
+			// &:hover{background-color:@c01;}
+	    }
+	}
+	//次要
+	.bm_btn.minor{color:@cBlack01;background-color:#e6e6e6;
+		&:hover{background-color:@cGrey03;}
+	}
+	//警示
+	.bm_btn.caution{background-color:@cA;
+		&:hover{background-color:@cA01;color:#fff;}
+	}
+	//删除
+	.bm_btn.delete{background-color:@cB;
+		&:hover{background-color:@cB01;}
+	}
+	//上传
+	.bm_btn.upload{background-color:@cC;
+		&:hover{background-color:@cC01;}
+	}
+	//禁用
+	.bm_btn.forbidden{color:@cGrey01; background-color:#e6e6e6; cursor:no-drop;
+		&:hover{background-color:#e6e6e6;}
+	}
+	
+	//========== 风格二 ==========//
+	//正常
+	.bm_btn_A{.strLen;*width:90px; display:inline-block; width:auto; min-width:90px; max-width:150px; height:38px; padding:0 10px; text-align:center; font-size:12px; line-height:38px; color:@cBlack01; border:1px solid @c; border-radius:2px; background-color:#fff;text-transform:capitalize;
+		&:hover{color:#fff; background-color:@c;}
+	}
+	//次要
+	.bm_btn_A.minor{color:@cBlack01; border-color:@cGrey02;
+		&:hover{border-color:#e6e6e6; background-color:#e6e6e6;}
+	}
+	//警示
+	.bm_btn_A.caution{border-color:@cA;
+		&:hover{background-color:@cA;}
+	}
+	//删除
+	.bm_btn_A.delete{border-color:@cB;
+		&:hover{background-color:@cB;}
+	}
+	//上传
+	.bm_btn_A.upload{border-color:@cC;
+		&:hover{background-color:@cC;}
+	}
+	//禁用
+	.bm_btn_A.forbidden{color:@cGrey01; border-color:@cGrey03; cursor:no-drop;
+		&:hover{background-color:#fff;}
+	}
+
+	//========== 风格三 ==========//
+	//正常
+	.bm_btn_B{.strLen;*width:90px; display:inline-block; width:auto; min-width:90px; max-width:150px; height:34px; padding:0 10px; text-align:center; font-size:12px; line-height:34px; color:@c; border:1px solid @c; border-radius:50px; background-color:#fff;
+		&:hover{color:#fff; background-color:@c;}
+	}
+	//次要
+	.bm_btn_B.minor{color:@cBlack01; border-color:@cGrey02;
+		&:hover{border-color:#e6e6e6; background-color:#e6e6e6;}
+	}
+	//警示
+	.bm_btn_B.caution{color:@cA; border-color:@cA;
+		&:hover{color:#fff; background-color:@cA;}
+	}
+	//删除
+	.bm_btn_B.delete{color:@cB; border-color:@cB;
+		&:hover{color:#fff; background-color:@cB;}
+	}
+	//上传
+	.bm_btn_B.upload{color:@cC;; border-color:@cC;
+		&:hover{color:#fff; background-color:@cC;}
+	}
+	//禁用
+	.bm_btn_B.forbidden{color:@cGrey01; border-color:@cGrey03; cursor:no-drop;
+		&:hover{color:@cGrey01; background-color:#fff;}
+	}
+
+	//========== 正在提交 ==========//
+	//正常
+	.bm_btn.submit,.bm_btn_A.submit,.bm_btn_B.submit,{color:#fff; background-color:@c; cursor:no-drop;
+		&:hover{color:#fff; background-color:@c;}
+	}
+	//次要
+	.minor.submit{color:@cBlack01; border-color:#e6e6e6; background-color:#e6e6e6;
+		&:hover{color:@cBlack01; background-color:#e6e6e6;}
+	}
+	//警示
+	.caution.submit{color:#fff; background-color:@cA;
+		&:hover{color:#fff; background-color:@cA;}
+	}
+	//删除
+	.delete.submit{color:#fff; background-color:@cB;
+		&:hover{color:#fff; background-color:@cB;}
+	}
+	//上传
+	.upload.submit{color:#fff; background-color:@cC;
+		&:hover{color:#fff; background-color:@cC;}
+	}
+	.bm_btn.grey{background:@c;color:#fff;border:none;
+       &:hover{background:@c01}
+	}
+
+	//评论
+	.btn-primary{background-color: @blue;border-color: @blue;color: #fff;
+    		&:hover{background-color: @blue_h; border-color: @blue_h;}
+	}
+
+
+
+  

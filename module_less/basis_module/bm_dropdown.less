@@ -1,0 +1,61 @@
+/********** 下拉 **********
+
+作    者:陈丹
+
+时    间:2016-11-11
+
+修 改 人:陈丹
+
+********** 下拉 **********/
+.bm_dropdown{
+	position:relative;display:inline-block;
+	.dropdown_link{position:relative;cursor: pointer;padding:0px 10px;height:34px;line-height:33px;border:1px solid transparent;display:inline-block;z-index:9;border-bottom-width: 0;
+		.icon_bottom{.animate;display:inline-block;vertical-align:middle;font-size:13px;}
+	}
+	&.openD{
+		.dropdown_link{background:#fff;.border;border-bottom-width:0;}
+		.dropdown_hover{color:#4d82b8;}
+	}
+	&:hover{
+		.dropdown_hover{
+			.icon_bottom{ -moz-transform: rotate(180deg);-webkit-transform: rotate(180deg);
+         		-o-transform: rotate(180deg);-ms-transform: rotate(180deg);
+         		transform: rotate(180deg);}
+	     }
+	}
+	.dropdown_menu{position:absolute;width:130%;top:34px;left: 0px;display:none;.shadow;.border;z-index:8;margin-top:-1px;background:#fff;padding:5px 0px;
+		> a{.strLen;display:block;padding:0px 10px;height:20px;line-height:20px;width:100%;
+           &:hover{background:@cGrey05;}
+		}
+	}
+}
+.bm_dropdown.openD{
+	&>.dropdown_menu{display:block;}
+}
+/* 风格下拉选择框 */
+.bm_dropdown.style_A{
+	.dropdown_link{min-width:200px;position:relative;.border;
+		&:hover{color:@cBlack01;}
+		.select_btn{position:absolute;top:0;right:0;width:28px;line-height:25px;height:100%;border-left:1px solid @cGrey02;background:#f2f2f2;
+			text-align: center;
+			.icon{margin-left:0px;}
+		}
+	}
+	.dropdown_menu{width:100%;}
+}
+
+/*清除初始化下拉样式*/
+.bm_dropdown(clear){
+	&.openD{
+		.dropdown_link{background:#fff;border-color:#fff}
+		.dropdown_hover{color:@ac;}
+	}
+	.dropdown_link{
+		background:#fff;height:auto;line-height:normal;
+	}
+    &:hover{
+	  .dropdown_link{
+		background:#fff;height:auto;line-height:normal;
+	  }
+    }
+}

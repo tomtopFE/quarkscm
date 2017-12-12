@@ -1,0 +1,509 @@
+/*类目页首页导航隐藏*/
+.m_nav_category .nav_l ul{display: none;}
+.m_nav_category .nav_l:hover ul{display: block;}
+
+#estimate-form {
+   height: 310px
+ }
+ #estimate-form .shipping-select .estimate-item {
+   display: inline-block;
+   margin-bottom: 20px;
+   width: 340px
+ }
+
+ #estimate-form .current-goods,
+ #estimate-form .extra-goods .good-item,
+ #reserve-stock form .form-item {
+   margin-bottom: 10px
+ }
+
+ #estimate-form .shipping-select .estimate-item.twice {
+   width: 680px
+ }
+
+ #estimate-form .shipping-select select {
+   max-width: 150px
+ }
+
+ #estimate-form .platform-fee .estimate-item {
+   display: inline-block;
+   width: 340px
+ }
+
+ #estimate-form .platform-fee .estimate-item input[type=text] {
+   width: 50px;
+   text-align: center
+ }
+
+ #estimate-form .platform-fee .estimate-item .question-mark {
+   background-image: url(../images/styleimg/spriter.png?20170921084836);
+   background-position: -244px -123px;
+   width: 20px;
+   height: 20px;
+   content: "";
+   background-repeat: no-repeat;
+   display: inline-block;
+   vertical-align: middle
+ }
+
+ #estimate-form .add-new,
+ #estimate-form .delete {
+   display: inline-block;
+   margin-left: 20px;
+   height: 28px;
+   line-height: 28px;
+   color: #35a2fe;
+   text-decoration: underline
+ }
+
+ #big-img-wrap,
+ #view-big-img {
+   height: 550px;
+   overflow: hidden
+ }
+
+ #estimate-form .sku-area {
+   float: left;
+   display: inline-block;
+   width: 435px
+ }
+
+ #estimate-form .sku-area input {
+   margin-right: 5px;
+   width: 100px
+ }
+
+ #estimate-form .qty {
+   float: left;
+   display: inline-block;
+   width: 220px
+ }
+
+ .none {
+   display: none;
+ }
+
+ .goods-descripe .estimate>table .toggle-shipping-cost {
+   display: block;
+   color: #da0120;
+   text-decoration: none
+ }
+
+ .goods-descripe .estimate>table .toggle-shipping-cost:hover {
+   border: 1px solid #da0120;
+   height: 36px;
+   line-height: 36px;
+   text-decoration: none
+ }
+
+ .goods-descripe .estimate h3 {
+   margin: 20px 0;
+   text-align: center;
+   line-height: normal;
+   font-size: 24px;
+   color: #000
+ }
+
+ .goods-descripe .estimate {
+   display: none;
+   position: relative;
+   left: 0;
+   width: 100%;
+ }
+
+ .goods-descripe .estimate h4 {
+   padding: 5px 0;
+   font-size: 14px;
+   text-align: center;
+   background: #F4F8FA
+ }
+
+ .goods-descripe .estimate table {
+   width: 1200px;
+   font-size: 12px;
+   border: none
+ }
+
+ .goods-descripe .estimate table th {
+   padding: 10px 5px;
+   text-align: center;
+   background: #fef0f2;
+   border: 1px solid #ddd
+ }
+
+ .goods-descripe .estimate table td {
+   padding: 10px 5px;
+   text-align: center;
+   border: 1px solid #ddd;
+   background: #f5f5f5
+ }
+
+ .goods-descripe .estimate table td a {
+   color: #da0120;
+   text-decoration: underline
+ }
+
+ .w300 {
+   width: 300px;
+ }
+
+ .fl {
+   float: left;
+ }
+
+ .mb10 {
+   margin-bottom: 10px;
+ }
+
+ #estimate-form .platform-fee .estimate-item {
+   display: inline-block;
+   width: 340px;
+ }
+
+ #estimate-form .sku-area {
+   float: left;
+   display: inline-block;
+   width: 435px;
+ }
+
+ #estimate-form .qty {
+   float: left;
+   display: inline-block;
+   width: 220px;
+ }
+
+ .qty input {
+   height: 24px;
+   line-height: 24px;
+   width: 70px;
+   text-align: center;
+ }
+
+ .va-m,
+ .vam {
+   vertical-align: middle;
+ }
+
+ .mask {
+   position: absolute;
+   top: 0px;
+   filter: alpha(opacity=60);
+   background-color: #777;
+   z-index: 1002;
+   left: 0px;
+   opacity: 0.5;
+   -moz-opacity: 0.5;
+ }
+
+ .btn-theme,
+ .btn-theme-2 {
+   background-color: #da0120;
+   border: 1px solid #da0120;
+ }
+
+ .btn-disable {
+   cursor: not-allowed;
+   background-color: #999;
+   border: 1px solid #999;
+   color: #fff;
+ }
+
+ button.js_estimate:active,
+ button.js_estimate:focus,
+ button.js_estimate:hover {
+   background: #da0120;
+   box-shadow: inset 0px 0px 10px #da0120;
+   -moz-box-shadow: inset 0px 0px 10px #da0120;
+   -webkit-box-shadow: inset 0px 0px 10px #da0120;
+ }
+
+ .fr {
+   float: right;
+ }
+ /*内容css*/
+
+ .ordercost-container {
+   width: 1200px;
+   margin: 0 auto;
+ }
+
+ .ordercost-shipping,
+ .ordercost-sku {
+   height: 115px;
+ }
+
+ .ordercost-estimate {
+   height: 115px;
+ }
+
+ .mb10 {
+   margin-bottom: 50px;
+ }
+
+ .shipping-left {
+   position: relative;
+   width: 180px;
+   height: 115px;
+   background-color: #f5f5f5;
+   float: left;
+ }
+
+ .shipping-right {
+   width: 40px;
+   height: 115px;
+   float: left;
+ }
+
+ .shipping-right>span {
+   display: inline-block;
+   font-size: 28px;
+   font-weight: bold;
+   width: 100%;
+   color: #ccc;
+   text-align: center;
+   line-height: 115px;
+ }
+
+ .shipping-checkbox {
+   display: inline-block;
+   position: absolute;
+   top: 4px;
+   left: 10px;
+ }
+
+ .shipping-checkbox>input {
+   width: 16px;
+   height: 16px;
+ }
+
+ .shipping-tip {
+   display: inline-block;
+   position: absolute;
+   top: 4px;
+   right: 7px;
+   cursor: pointer;
+ }
+
+ .shipping-tip>i {
+   width: 18px;
+   height: 18px;
+   display: block;
+   background: url(../images/spriter.png);
+ }
+
+ .tips {
+   padding-left: 3px;
+   display: none;
+   position: absolute;
+   border: 1px solid #ccc;
+   z-index: 999;
+   background: #fff;
+   top: -58px;
+   left: -45px;
+ }
+
+ .shipping-tip:hover .tips {
+   display: block;
+ }
+
+ .tips p {
+   width: 200px;
+   font-size: 12px;
+   line-height: 18px;
+   overflow: hidden;
+   padding-left: 5px;
+   text-overflow: ellipsis;
+   margin-bottom: 3px;
+ }
+
+ .tips span {
+   position: absolute;
+   display: block;
+   bottom: -16px;
+   left: 94px;
+   width: 16px;
+   z-index: 999;
+   height: 16px;
+   background: url(../icon/down_arrow.png) no-repeat;
+ }
+
+ .shipping-content {
+   position: relative;
+   width: 180px;
+   margin: 0 auto;
+   text-align: center;
+ }
+
+ .shipping-content>p {
+   margin: 20px 0px 0px 0px;
+   width: 100%;
+   height: 45px;
+   line-height: 45px;
+   overflow: hidden;
+ }
+
+ .shipping-content>select {
+   width: 180px;
+   height: 30px;
+   outline: none;
+   border-radius: 4px;
+   border: 1px solid #ccc;
+ }
+
+ #reseller-price>div {
+   background-color: #ddd;
+ }
+
+/* .sp {
+   font-size: 28px !important;
+ }*/
+ /*花费计算*/
+
+ .es-cost {
+   width: 150px;
+ }
+
+ .es-cost>div {
+   position: relative;
+   height: 115px;
+   background-color: #f5f5f5;
+   width: 110px;
+ }
+
+ .es-cost>span {
+   line-height: 115px;
+   width: 40px;
+   font-size: 14px;
+   color: #ccc;
+   text-align: center;
+   font-weight: bold;
+ }
+ .es-cost input{
+   text-align: center;
+ }
+
+ .es-content {
+   width: 110px;
+   margin: 0 auto;
+ }
+
+ .es-content>p {
+   margin: 28px 0px 0px 0px;
+   text-align: center;
+   width: 110px;
+   height: 45px;
+   line-height: 45px;
+   overflow: hidden;
+ }
+
+ .es-content>input {
+   width: 80px;
+   height: 26px;
+   margin-left: 14px;
+   outline: none;
+   border: 1px solid #ccc;
+ }
+ /*sku*/
+
+ .sku-count>li {
+   margin-bottom: 20px;
+ }
+
+ .sku-count>li:last-child {
+   margin-left: 5px;
+   margin-right: 40px;
+ }
+
+ .sku-count .shipping-content>p {
+   text-align: left;
+   margin-top: 30px;
+   height: 40px;
+ }
+
+ .sku-count .shipping-content>p>input {
+   border: 1px solid transparent;
+ }
+
+ .sku-number {
+   text-align: left;
+ }
+
+ .sku-number>input {
+   width: 90px;
+   height: 26px;
+   border: 1px solid #ccc;
+   outline: none;
+   text-align: center;
+ }
+
+ .sku-input {
+   margin-left: 10px;
+   width: 120px;
+   height: 26px;
+   outline: none;
+ }
+
+ .sku-span {
+   width: 30px;
+   line-height: 30px;
+ }
+
+ .sku-add,
+ .sku-dis {
+   cursor: pointer;
+   border-radius: 4px;
+   background-color: #fff;
+   line-height: 26px;
+   margin: 0 3px;
+   width: 20px;
+   height: 26px;
+   border: 1px solid #ccc;
+   text-align: center;
+ }
+
+ .sku-delet {
+   width: 16px;
+   height: 16px;
+   color: #ccc;
+   line-height: 12px;
+   text-align: center;
+   border: 1px solid #ccc;
+   border-radius: 50%;
+ }
+
+ .add-sku,
+ .es-sku {
+   width: 200px;
+   height: 115px;
+   line-height: 115px;
+   text-align: center;
+   cursor: pointer;
+ }
+
+ .lf {
+   float: left;
+ }
+
+ .clearfix {
+   display: block;
+   clear: both;
+   zoom: 1;
+ }
+#mask .wait {
+     background: url(../images/AjaxLoader.gif) no-repeat;
+     position: fixed;
+     top: 50%;
+     left: 50%;
+     width: 80px;
+     height: 80px;
+     margin-top: -15px;
+     margin-left: -15px;
+ }
+ .fb {
+    font-family: Arial;
+    font-weight: 700;
+}.mb20 {
+    margin-bottom: 20px;
+}.mt20 {
+    margin-top: 20px;
+}

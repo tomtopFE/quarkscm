@@ -1,0 +1,29 @@
+/*******************新增样式******************************/
+.containIcon{min-width: 1200px;font-size: 0;margin-top: 42px;}
+.containIcon>div{width: 190px;padding:14px 4px 0;text-align:center;word-wrap: break-word;white-space: normal;}
+
+.containIcon>div p{color: #9F9C9F;line-height:16px;height:34px;overflow : hidden;}
+.lineBlock{display: inline-block;zoom: 1;font-size: 12px;letter-spacing: normal;word-spacing: normal;vertical-align: top;}
+.containItem{margin-bottom: 5px;}
+.containItem>span{color:#999;font-size:14px;font-weight: 600;}
+.containItem>div{width:95px;height: 75px;margin: 0 auto;}
+
+
+/*图标*/
+.containItem .icon_foot{background: url("../icon/icon_sprite2.png") no-repeat;}
+.containItem .icon_category{background-position: -8px -4px;}
+.containItem .icon_price{background-position: -105px -6px;}
+.containItem .icon_ship{background-position: -193px -6px;}
+.containItem .icon_warehouse{background-position: -387px -5px;}
+.containItem .icon_profit{background-position: -285px -4px;}
+.containItem .icon_platform{background-position: -490px -6px;}
+.containIcon .lineBlock:hover .icon_category{background-position: -8px -82px;}
+.containIcon .lineBlock:hover .icon_price{background-position: -105px -84px;}
+.containIcon .lineBlock:hover .icon_ship{background-position: -193px -84px;}
+.containIcon .lineBlock:hover .icon_warehouse{background-position: -387px -83px;}
+.containIcon .lineBlock:hover .icon_profit{background-position: -285px -82px;}
+.containIcon .lineBlock:hover .icon_platform{background-position: -490px -84px;}
+
+
+
+/*******************新增样式******************************/

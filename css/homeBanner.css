@@ -1,0 +1,141 @@
+.overflowWrap{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.banner{width: 100%;max-width: 1200px;margin: 0 auto;}
+#newnav{
+    box-sizing:border-box;
+    width:1200px;
+    margin:10px auto;
+    height:40px;
+    position:relative
+}
+.nav_left{
+    box-sizing:border-box;
+    position:relative;
+    float:left;
+    width:19%;
+    background-color:#4d82b8;
+    height:40px;
+    line-height:40px
+}
+.nav_left>div{
+    width:100%;
+    position:relative;
+    text-align:center
+}
+.nav_left>div>p{
+    font-size:14px;
+    color:#fff;
+    width:90%
+}
+.nav_left>div>i{
+    position:absolute;
+    right:10px;
+    top:7px;
+    background-image:url(../images/iconTop.png);
+    background-position:-66px -5px;
+    background-repeat:no-repeat;
+    display:inline-block;
+    width:20px;
+    height:20px;
+    vertical-align:middle
+}
+.menu_list{
+    box-sizing:border-box;
+    z-index:9999;
+    position:absolute;
+    top:40px;
+    left:0;
+    width:100%;
+    min-height: 466px;
+    background-color:#fff;
+    border:1px solid
+    #ccc;border-radius:0 0 5px 5px
+}
+a:hover {
+    color: #333
+}
+
+.menu_list>li{
+    padding-left:10px
+}
+.menu_list>li>a{
+    box-sizing:border-box;
+    width:90%;
+    display:block;
+    height:29px;
+    font-size:12px;
+    position:relative;
+    line-height:29px
+}
+.menu_list>li>a>i{
+    position:absolute;
+    display:inline-block;
+    width:20px;
+    height:20px;
+    right:-7px;
+    top:5px;
+    background-image:url(../images/iconTop.png);
+    background-repeat:no-repeat;
+    background-position:-95px -6px;
+    vertical-align:middle
+}
+.menu_connet{
+    box-sizing:border-box;
+    display:none;
+    position:absolute;
+    z-index:10000;
+    left:100%;
+    top:-1px;
+    min-height:466px;
+    width:431%;
+    border:1px solid #ccc;
+    background-color:#fff;
+    border-top:0
+}
+.menu_connet>dl{
+    float:left;
+    width:33%;
+    padding-left:5px;
+    box-sizing:border-box
+}
+.menu_connet>dl>dt{
+    font-size:14px;
+    line-height:25px;
+    box-sizing:border-box
+}.menu_connet>dl>dd{
+     font-size:12px;
+     line-height:20px;
+     box-sizing:border-box
+ }
+.nav_right{
+    box-sizing:border-box;
+    float:left;
+    width:81%;
+    background-color:#fafafa;
+    border:1px solid #ccc;
+    height:40px;
+    line-height:39px
+}
+
+
+.nav_right>li{
+    color:#4d82b8;
+    float:left;
+    padding-left:5px;
+    border-right:1px solid #ccc;
+    box-sizing:border-box
+}
+#owl-fecshop .item img{
+    height:475px
+}
+.banner-slider{
+    width: 960px;
+    height:475px;
+    margin-left: 240px;
+    position: relative;
+    z-index:10;
+}
+.selected {
+    background-color: #ebebeb;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}

@@ -1,0 +1,65 @@
+/********** 头部 **********
+
+作    者:wxl
+
+时    间:20170712
+
+********** 头部 **********/
+.header{width: 100%;background: #fff;margin: 0 auto;}
+.m_head{width:100%;max-width:1200px;margin:0 auto;.bgf;position:relative;
+    .lineBlock{vertical-align:middle;}
+    .head_ad{position:absolute;width:100%;height:600px;left:0;top:0;background:url('../images/header_ad.png') no-repeat center top;display: block}
+	.head_wrap{
+		padding:25px 0 15px 0;position:relative;
+	}
+	.head_logo{display:inline-block;margin-right:55px;position:relative;vertical-align:top;margin-top:-4px;
+		a{display:block;width:197px;height:46px;
+			img{max-width:100%;}
+		}
+	}
+
+	.head_right{position:absolute;right:0;top:22px;
+		.favorites{display:inline-block;margin-right:15px;font-size:14px;padding-top:7px;
+			i{margin-right:5px;}
+		}
+	}
+	.m_head_acount{
+		.lineBlock(@align:middle);margin-right:40px;font-size:13px;
+	    .bm_dropdown{
+			&.openD{
+				.dropdown_link{background:#fff;border-color:#fff}
+
+			}
+			.dropdown_link{
+				background:#fff;height:auto;line-height:normal;
+				a{display:inline-block;font-size: 14px;line-height:36px;.strLen;max-width:88px;vertical-align:middle;text-decoration: none;}
+				&:hover{
+
+				}
+			}
+		    &:hover{
+			  .dropdown_link{
+				background:#fff;height:auto;line-height:normal;
+			  }
+		    }
+		    .dropdown_menu{
+		    	top:44px;z-index:100;padding:0;left:-20px;
+		    }
+		}/*清除下拉菜单的初始化样式*/
+		i{font-size:36px;color:#666;}
+	    h5{padding-top:5px;a{font-size:14px;color:#333;font-weight:bold;text-transform:uppercase;}}
+	}
+	.favoritesHeader{display:inline-block;font-size:14px;position:relative;line-height:36px;vertical-align: middle;text-decoration: none;
+	  .icon_wishlist{font-size:36px;position:absolute;left:-36px;color:#666;}
+	  p{max-width:70px;overflow:hidden;.strLen;}
+	}
+    &.head_fixed{
+       position:fixed;top:0;z-index:100;.border;border-width:0 0 1px;
+       .head_wrap{padding:18px 0}
+       .search_hot{display:none}
+       .head_ad{display:none}
+       .head_right{top:13px}
+       .head_logo{margin-left:60px;margin-right:20px;}
+	}
+}
+

@@ -1,0 +1,61 @@
+/********** 头部下拉登录部分 **********
+
+作    者:wxl
+
+时    间:2016-11-16
+
+********** 头部下拉登录部分 **********/
+.icon_arr_top{
+  background-image:url('../icon/iconsprite.png@{version}');
+  display:inline-block;vertical-align:middle;
+  background-repeat: no-repeat;
+  background-position: -390px -354px;
+  width: 13px;
+  height: 7px;
+}
+a{text-decoration: none!important;}
+.m_signin_box{
+	width:auto !important;border-radius:4px;
+	.icon_arr_top{position:absolute;top:-7px;left:27%;}
+  .sigin_c{padding:20px 25px;
+        .tt{margin-bottom:10px;text-align: center;font-size: 12px;}
+        .btn{display:inline-block;text-align:center;text-decoration:none;width:190px !important;height:38px;line-height:36px;max-width:245px;font-size:14px;.btnOpacity;
+            &:hover{.btnHoverOpacity;color:#fff;}
+        }
+        .bm_btn{background:@c;color:#fff;border:none;}
+        .bm_btn_A{
+            background:@cA;color:#fff;border:none;
+            &:hover{background:none;background:@cA;}
+        }
+	}
+	.other_login{
+	   text-align:center;margin-bottom:15px;
+      .bd{
+        p{margin:15px 0}
+      }
+      a{margin-right:8px;width:26px;height:26px;display:inline-block;vertical-align:middle;border-radius:2px;
+          i{line-height:26px;font-size:20px;color:#fff;}
+          &.google{
+             background:#e54936;
+          }
+          &.facebook{
+             background:#344f80;
+          }
+          &.twitter{
+          	 background:#1ebef0;
+          }
+          &.vk{
+          	 background:#507299;
+          }
+      }
+    }
+    p.tips{padding-bottom:10px}
+    .acount_link{
+      min-width:150px;margin-top:-10px;
+    	p{font-size:14px;color:#333;padding-bottom:5px;}
+    	a{height:26px;line-height:26px;display:block;.strLen();
+        &:hover{color: @whole;}
+        &:first-child{font-weight:bold;}
+      }
+    }
+}

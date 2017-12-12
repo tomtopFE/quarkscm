@@ -1,0 +1,153 @@
+/********** 类似cafago的通用导航 **********
+作    者:wxl
+
+时    间:2016-06-10
+
+注:此文件修改需要向创建人核实
+
+修 改 人:wxl
+
+修改时间:20161125
+
+修改说明:xxx
+
+********** 类似cafago的通用导航 **********/
+
+/*less 变量*/
+
+/*整站通用变化的opacity*/
+.opacity(@p:100){
+    filter:alpha(opacity=@p);   
+    -moz-opacity:@p/100;   
+    opacity:@p/100;   
+}
+.mask2{
+  position:fixed;top:0;right:0;bottom:0;left:0;.opacity(@p:40);background-color:#000;z-index:120;
+}
+//水平并排相关
+.lineBlockBox(@align:left){display:table; text-align:@align; width:100%; font-size:0; letter-spacing:-3px;  word-spacing:-3px;}
+.lineBlock(@align:middle){display:inline-block; *display:inline; *zoom:1; vertical-align:@align; font-size:12px; letter-spacing:0; word-spacing:0;}
+.lineBlockBoxs(@align:left,@salign:middle){display:table; width:100%;  text-align:@align; font-size:0; letter-spacing:-3px;  word-spacing:-3px;
+  >*{.lineBlock(@salign);}
+}
+//水平并排相关
+.lineBlockBox{display:table; width:100%;font-size:0;letter-spacing:-3px;word-spacing:-3px;
+  >*{.lineBlock();}
+}
+.nav{width: 100%;border-top: 1px solid #ccc;border-bottom: 1px solid #ccc;background: #fff;}
+.m_nav_category{width: 1200px;margin: 0 auto;border: none;
+   .nav_c{height:46px;
+    nav.lineBlockBox{height: 100%;}
+   }
+   .nav_l{position:relative;width:240px;height:100%;z-index:80;
+       &.nav_hide{ul{display:none}}
+      .category{.border(@color:@whole);.strLen;width:166px;border-bottom:0;background:@whole;height:100%;line-height:45px;position:relative;padding:0 40px 0 34px;color:#fff;font-size:14px;top:-1px;text-transform:capitalize;cursor:pointer;border-right:0;
+        .tt{font-size:14px;position: absolute;top: 14px;color: #fff;}
+         i{position:absolute;right:20px;top:18px;line-height:1}
+         .icon_sidebar{position:absolute;left:10px;top:13px;line-height:1;font-size:20px}
+         .icon_bottom{display:none}
+       }
+       ul{.border;border-top:0;position:absolute;top:46px;left:0;background:#fff;z-index:5;width:239px;height: 475px;
+         //&:hover{border-left-color:transparent;border-bottom-color:transparent;}
+       }
+
+       li{line-height: 36px;.border(@color:transparent);
+         .nav_first{.strLen;border-width:1px 0;display:block;width:100%;height:34px;line-height:32px;padding:0px 5px 0 10px;font-size:13px;position:relative;transition:padding 0.5s ease;text-decoration: none;
+           span{margin-right:4px;.lineBlock();font-size:20px;margin-top:-3px;}
+           &:hover{z-index:10;padding-left:14px;
+              s{color:@cLink}
+              i{display:none}
+           }
+         }
+         &.cur{border-top:1px solid #ddd;border-bottom: 1px solid #ddd;
+           width:239px;
+           .nav_first{
+              color:@cLink;z-index:10;.bgf;
+              s{color:@cLink;}
+              i{display:none}
+           }
+         }
+         &:last-child{
+              border-bottom-color:#fff !important;
+              height:43px;
+         }
+         &:last-child:hover{
+           .nav_first{height:42px;}
+         }
+         i{position:absolute;right:16px;top:11px;display:none}
+         i{display:none}
+         &:first-child{
+            .slide_menu{
+               dl{margin-bottom:0px;}
+               dt{ 
+                  a{padding:0 10px;text-align:left;height:30px;line-height:30px;font-weight:normal;font-size:13px;color:@a;
+                    &:hover{color:@cLink}
+                  }
+               }
+            }
+         }
+       }
+       .slide_menu{max-width:938px;overflow:hidden;.border;display:none;width:auto;background:#fff;>*{vertical-align:top};position:absolute;padding:10px;left:239px;top:0px;z-index:5;white-space:nowrap;box-shadow: 4px 4px 4px 0 rgba(0,0,0,.1);min-height:270px;
+         .menu_wrap{margin-top:-10px;margin-right:6px;}
+         dl{margin-bottom:15px;}
+         dt{height:24px;line-height:24px;margin-top:10px;
+          a{.strLen;display:block;padding:0 10px;width:165px;height:100%;font-size:13px;font-weight:bold;color: @color333;
+            &:hover{color:@cLink;}
+          }
+         }  
+         dd{
+            a{.strLen;display:block;padding:0 10px;line-height:23px;white-space:nowrap;max-width:190px;font-size:12px;color:#666;&:hover{color:@cLink}
+            }
+         }
+         .other_box{width:auto;white-space:nowrap;
+            >*{vertical-align:top}
+            .other_categrey{width:165px;margin-top:-10px;
+               dt{padding:0 15px;font-size:12px;font-weight:bold;}
+               dd{position: static;width:100%;
+                 a{.strLen;display:block;padding:0 15px;line-height:20px;white-space:nowrap;}
+               }
+            }
+            .nav_banner{
+              a{display:block;}
+            }
+            .nav_banner{
+              position:absolute;right:0;bottom:-5px;z-index:-1;
+              a{display:block;}
+            }
+         }
+         .other_box{
+            width:200px;
+         }
+       }
+       .slide_menu{min-height:454px;}
+  }
+
+  .nav_r{background: #fff;
+     position:relative;width:960px;height:46px;
+     li{.fl;height:46px;
+       a{.strLen;display:block;width:100%;line-height:46px;max-width:129px;font-size:14px;height:46px;color:#666;text-align: center;min-width:116px;text-decoration: none;
+         &:hover{color:@cLink;}
+       }
+       &.nav_brand{position:absolute;right:0;top:0;.border_l;line-height:44px;.border_r;
+        a{padding:0;display:inline-block;width:135px;height:44px;background:url('../images/brands_k.gif') no-repeat center center;}
+        }
+     }
+    .nav_coupon{position:relative;
+      &:before{content:'';background-image:url(../icon/icon_new7.png);display:inline-block;vertical-align:middle;background-repeat:no-repeat;width:28px;height:17px;position:absolute;top:1px;right:0;}
+      a{color:@whole;}
+    }
+     .nav_end_down{
+       margin-top:-1px;
+       .dropdown_link{
+         height:46px;
+       }
+       .dropdown_menu{
+          overflow:hidden;top:46px;
+          a{text-align:left;padding-left:20px;height:30px;line-height:30px;max-width:200px}
+       }
+    }
+    .bm_hot_tag{
+        &:before{top:1px;right:0px}
+    }
+  }
+}

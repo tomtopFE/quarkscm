@@ -1,0 +1,170 @@
+/********** 风格色 **********
+
+作    者:qianbingjian
+
+
+时    间:2017-06-29
+
+********** 风格色 **********/
+
+/** {*/
+	/*-webkit-box-sizing: border-box;*/
+	/*-moz-box-sizing: border-box;*/
+	/*box-sizing: border-box*/
+/*}*/
+#top_main .top_header {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box
+}
+
+body {
+	background: #fff
+}
+
+a {
+	outline: 0;
+	blr: expression(this.onFocus=this.blur())
+}
+a:hover {
+	color: #333
+}
+
+.link,
+.link:hover {
+	color: #0b98aa
+}
+
+.contact_main p a,
+.link:hover,
+header .member_icon a.member:hover {
+	text-decoration: underline
+}
+
+
+.overflowWrap {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+#nav {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  width: 1200px;
+  margin: 10px auto;
+  height: 40px;
+}
+.nav_left {
+  position: relative;
+  float: left;
+  width: 19%;
+  background-color: #4d82b8;
+  height: 40px;
+  line-height: 40px;
+}
+.nav_left > div {
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+.nav_left > div > p {
+  font-size: 14px;
+  color: #fff;
+  width: 90%;
+}
+.nav_left > div > i {
+  position: absolute;
+  right: 10px;
+  top: 7px;
+  background-image: url(../img/iconTop.png);
+  background-position: -66px -5px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+}
+.nav_left:hover .menu_list {
+  display: block;
+}
+.menu_list {
+  display: none;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 0 0 5px 5px;
+}
+.menu_list > li {
+  padding-left: 10px;
+  width:100%;
+}
+.menu_list > li > a {
+  width: 90%;
+  display: block;
+  height: 29px;
+  font-size: 12px;
+  position: relative;
+  line-height: 29px;
+}
+.menu_list > li > a > i {
+  position: absolute;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  right: -7px;
+  top: 5px;
+  background-image: url(../img/iconTop.png);
+  background-repeat: no-repeat;
+  background-position: -95px -6px;
+  vertical-align: middle;
+}
+.menu_connet {
+  display: none;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  min-height: auto;
+  width: 430%;
+  border: 1px solid #ccc;
+  background-color:#FFFFFF ;
+}
+.menu_connet > dl {
+  float: left;
+  width: 33%;
+  padding-left: 5px;
+  box-sizing: border-box;
+}
+.menu_connet > dl > dt {
+  font-size: 14px;
+  line-height: 25px;
+  box-sizing: border-box;
+  width: 100%;
+}
+.menu_connet > dl > dd {
+  font-size: 12px ;
+  line-height: 20px;
+  box-sizing: border-box;
+  width: 100%;
+}
+.nav_right {
+  float: left;
+  width: 80%;
+  background-color: #ebebeb;
+  border: 1px solid #ccc;
+  height: 38px;
+  line-height: 38px;
+}
+.nav_right > li {
+  float: left;
+  padding-left: 5px;
+  border-right: 1px solid #ccc;
+}
+.selected {
+  background-color: #ebebeb;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
