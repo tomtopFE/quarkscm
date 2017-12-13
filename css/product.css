@@ -254,15 +254,7 @@
    float: left;
  }
 
- .shipping-right>span {
-   display: inline-block;
-   font-size: 28px;
-   font-weight: bold;
-   width: 100%;
-   color: #ccc;
-   text-align: center;
-   line-height: 115px;
- }
+ .shipping-right>span {display: inline-block;font-size: 26px;font-weight: bold;width: 100%;color: #ccc;text-align: center;line-height: 115px;}
 
  .shipping-checkbox {
    display: inline-block;
@@ -276,20 +268,8 @@
    height: 16px;
  }
 
- .shipping-tip {
-   display: inline-block;
-   position: absolute;
-   top: 4px;
-   right: 7px;
-   cursor: pointer;
- }
-
- .shipping-tip>i {
-   width: 18px;
-   height: 18px;
-   display: block;
-   background: url(../images/spriter.png);
- }
+ .shipping-tip {display: inline-block;position: absolute;top: 2px;right: 6px;cursor: pointer;}
+ .shipping-tip>i {color: #f39800;font-size: 24px;line-height: 24px;}
 
  .tips {
    padding-left: 3px;
@@ -298,7 +278,7 @@
    border: 1px solid #ccc;
    z-index: 999;
    background: #fff;
-   top: -58px;
+   bottom: 28px;
    left: -45px;
  }
 
@@ -430,7 +410,7 @@
 
  .sku-number>input {
    width: 90px;
-   height: 26px;
+   height: 30px;
    border: 1px solid #ccc;
    outline: none;
    text-align: center;
@@ -451,16 +431,16 @@
  .sku-add,
  .sku-dis {
    cursor: pointer;
-   border-radius: 4px;
    background-color: #fff;
-   line-height: 26px;
-   margin: 0 3px;
-   width: 20px;
-   height: 26px;
+   line-height: 30px;
+   margin: 0 -1px;
+   width: 24px;
+   height: 30px;
    border: 1px solid #ccc;
    text-align: center;
  }
-
+.sku-add{border-bottom-right-radius: 4px;border-top-right-radius: 4px;}
+.sku-dis{border-bottom-left-radius: 4px;border-top-left-radius: 4px;}
  .sku-delet {
    width: 16px;
    height: 16px;
@@ -507,3 +487,10 @@
 }.mt20 {
     margin-top: 20px;
 }
+ /*购买推荐（产品详情页）*/
+.buy_also_buy .owl-item p.pro_img,.buy_also_buy .owl-item .proPrice{margin: 0;}
+
+.product_description_info .descripe-item .shipping-right button{width: 110px;padding: 0;}
+.product_description_info .tab-pane .description_img{margin-top: 16px;}
+/*产品详情页面介绍*/
+.product_description_info .tab-pane p img{width: auto;height: auto;}
