@@ -18,10 +18,6 @@
     box-sizing: content-box
 }
 
-body {
-	background: #fff
-}
-
 a {
 	outline: 0;
 	blr: expression(this.onFocus=this.blur())
