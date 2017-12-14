@@ -247,7 +247,10 @@ button.redBtn:focus , button.redBtn:active {
     position: relative;
 }
 
-.main.container{width: 1200px;margin:auto;min-height:400px;background: #fff;}
+.main.container{width: 1200px;margin:auto;min-height:400px;}
+/*类目页面与详情页面背景变为白色*/
+.two-columns-left,.one-column{background: #fff;}
+
 .t_hidden {font: 0px/0 Verdana;}
 .topSeachForm .seachBtn {
     cursor: pointer;
@@ -1718,17 +1721,7 @@ a.next_images {
     margin: 0 0 15px;
 }
 .product_description_info{list-style:none;margin:25px 0  ;padding:0;text-decoration:none;}
-.product_description_info #nav-container li {
-    border-right: 2px solid #eee;
-    cursor: pointer;
-    float: left;
-    font-size: 13px;
-    height: 50px;
-    line-height: 50px;
-    /* padding: 0 15px;*/
-    text-align: center;
-    width: auto;
-}
+.product_description_info #nav-container li {border-right: 2px solid #eee;cursor: pointer;float: left;font-size: 13px;height: 51px;line-height: 51px;text-align: center;width: auto;}
 
 
 .product_description_info #nav-container  ul{
@@ -1768,10 +1761,8 @@ span.description {
 }
 
 .tab-content > .active,
-.pill-content > .active {
-    display: block;
-}
-.product_description_info  .nav .active{background:#fff;border-top:2px solid #1a92cf;color:#1a92cf;position: relative;top:-1px;}
+.pill-content > .active {display: block;}
+.product_description_info .nav .active{background:#fff;border-top:2px solid #f39800;border-bottom:1px solid #fff;color:#1a92cf;position: relative;top:-1px;}
 .product_description_info  .fixed{
     position:fixed;
     top:0;
@@ -1781,8 +1772,9 @@ span.description {
 .product_description_info #nav-container  a{
     color:#505050;
 }
+.product_description_info  #nav-container li.active a{color: #f39800;}
 .product_page{font-size:12px;}
-.product_description_info #text{padding: 20px 10px 20px 20px;}
+.product_description_info #text{padding: 20px}
 .tab-content > .tab-pane{font-size: 13px;}
 .scroll_left a {color: #333;font-size: 19px;line-height: 40px;text-decoration: none;}
 .scroll_horizontal {padding: 10px 0 10px;position: relative;width: 100%;}
