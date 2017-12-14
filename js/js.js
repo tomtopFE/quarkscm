@@ -34,27 +34,35 @@ $(document).ready(function(){
 		},
 		url:loginInfoUrl,
 		success:function(data, textStatus){ 
-			welcome = $('.welcome_str').val();
-			logoutStr = $('.logoutStr').val();
+			// welcome = $('.welcome_str').val();
+			// logoutStr = $('.logoutStr').val();
+            var ele_resigter = $(".m_head_acount>.bm_dropdown>.dropdown_menu .sigin_c .signIn")
+            var ele_login = $(".m_head_acount>.bm_dropdown>.dropdown_menu .sigin_c .acount_link")
 			if(data.loginStatus){
-				customer_name = data.customer_name;
-				str = '<span id="welcome">'+welcome+' '+customer_name+',</span>';
-				str += '<span id="js_isNotLogin">';
-				str += '<a href="'+logoutUrl+'" rel="nofollow">'+logoutStr+'</a>';
-				str += '</span>';
-				$(".login-text").html(str);
+			    $(".m_head_acount>.bm_dropdown>.dropdown_link>a").html(data.customer_name)
+                //隐藏登陆注册部分
+                ele_resigter.hide()
+                //开启个人用户中心
+                ele_login.show()
+                // $(".m_head_acount>.bm_dropdown>.dropdown_link>a").html(data.customer_name)
+				// customer_name = data.customer_name;
+				// str = '<span id="welcome">'+welcome+' '+customer_name+',</span>';
+				// str += '<span id="js_isNotLogin">';
+				// str += '<a href="'+logoutUrl+'" rel="nofollow">'+logoutStr+'</a>';
+				// str += '</span>';
+				// $(".login-text").html(str);
 			}
-			if(data.favorite){
-				$(".myFavorite_nohove").addClass("act");
-				$(".myFavorite_nohove a").addClass("act");
-			}
-			if(data.favorite_product_count){
-				$("#js_favour_num").html(data.favorite_product_count);
-			}
-			if(data.csrfName && data.csrfVal && data.product_id){
-				$(".product_csrf").attr("name",data.csrfName);
-				$(".product_csrf").val(data.csrfVal);
-			}
+			// if(data.favorite){
+			// 	$(".myFavorite_nohove").addClass("act");
+			// 	$(".myFavorite_nohove a").addClass("act");
+			// }
+			// if(data.favorite_product_count){
+			// 	$("#js_favour_num").html(data.favorite_product_count);
+			// }
+			// if(data.csrfName && data.csrfVal && data.product_id){
+			// 	$(".product_csrf").attr("name",data.csrfName);
+			// 	$(".product_csrf").val(data.csrfVal);
+			// }
 			if(data.cart_qty){
 				$("#js_cart_items").html(data.cart_qty);
 			}
