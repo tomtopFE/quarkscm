@@ -1,0 +1,156 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title></title>
+    <link rel="shortcut icon" href="http://www.quarkscm.com/favicon.ico">
+    <link rel="apple-touch-icon" href="http://www.quarkscm.com/apple-touch-icon.png">
+    <meta name="robots" content="INDEX,FOLLOW" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="css/index.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/ie.css" rel="stylesheet">
+    <link href="css/banner.css" rel="stylesheet">
+    <link href="css/product.css" rel="stylesheet">
+    <link href="css/acount.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <link href="css/ltie9.css" rel="stylesheet">
+    <![endif]--></head>
+<body>
+<header id="header">
+    <div id="activityHeader" style="margin-bottom: -6px">
+        <a href="http://www.quarkscm.com/static/20171108/index.html" target="_blank"><img width="100%" src="//img1.quarkscm.com/images/openActivityHeader.jpg"></a>
+    </div>
+    <!--修改head-->
+    <div class="header">
+        <div class="m_head">
+            <div class="head_wrap w">
+                <div class="head_logo">
+                    <a titel="fecshop logo" href="http://www.quarkscm.com" style="">
+                        <img src="//img1.quarkscm.com/custom/logo.png">
+                    </a>
+                </div>
+                <!--搜索框-->
+            </div>
+        </div>
+    </div>
+    <!--新增头部20171206-->
+</header>
+<div class="main-container">
+    <div class="main container one-column">
+        <div class="fecshop_message">
+            <div class="error-msg">
+                <div>Email cannot be blank.,Password cannot be blank.</div>
+            </div>
+        </div>
+        <div class="account-login">
+            <div class="page-title">
+                <h1>Login or Create an Account</h1>
+            </div>
+            <form action="http://www.quarkscm.com/customer/account/login" method="post" id="login-form">
+                <div class="col2-set">
+                    <div class="col-1 new-users">
+                        <div class="content">
+                            <h2>New Customers</h2>
+                            <p>By creating an account with our store, you will be able to move through the checkout process faster, store multiple shipping addresses, view and track your orders in your account and more.</p>
+                        </div>
+                        <button onclick="window.location='http://www.quarkscm.com/customer/account/register';" type="button" title="Create an Account" class="redBtn"><em><span><i></i>register</span></em></button>
+                    </div>
+                    <div class="col-2 registered-users">
+                        <div class="content">
+                            <h2>Registered Customers</h2>
+                            <p>If you have an account with us, please log in.</p>
+                            <ul class="form-list">
+                                <li>
+                                    <label for="email" class="required"><em>*</em>Email Address</label>
+                                    <div class="input-box">
+                                        <input name="editForm[email]" value="" id="email" class="input-text required-entry validate-email" title="Email Address" type="text">
+                                    </div>
+                                </li>
+                                <li>
+                                    <label for="pass" class="required"><em>*</em>Password</label>
+                                    <div class="input-box">
+                                        <input name="editForm[password]" class="input-text required-entry validate-password" id="pass" title="Password" type="password">
+                                    </div>
+                                </li>
+
+                                <div class="clear"></div>
+                                <div class="buttons-set">
+                                    <button type="submit" id="js_registBtn" class="redBtn"><em><span><i></i>Sign In</span></em></button>
+                                    <a href="http://www.quarkscm.com/customer/account/forgotpassword" class="f-left">Forgot Your Password?</a>
+
+                                </div>
+                                <div class="clear"></div>
+                                <div class="fago_login">
+                                    <img onclick="facebooklogin()" src="//img3.quarkscm.com/images/facebook.jpg" />
+                                    <img onclick="googlelogin()"src="//img3.quarkscm.com/images/google.jpg" /><br/>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+                <input class="thiscsrf" type="hidden" value="HezeIiGNsnMlR7cB3yf2kiGtaZTgwpGrBuphEe02c6DSBVl_LIJq7uxCjay1Sby2E1vlrSk9dLPPfJHmuqaWZQ==" name="_csrf" />			<div class="col2-set">
+                <div class="col-1 new-users">
+                    <div class="buttons-set">
+
+                    </div>
+                </div>
+                <div class="col-2 registered-users">
+
+
+                </div>
+            </div>
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var newwindow;
+        var intId;
+        function facebooklogin(){
+            var  screenX    = typeof window.screenX != 'undefined' ? window.screenX : window.screenLeft,
+                screenY    = typeof window.screenY != 'undefined' ? window.screenY : window.screenTop,
+                outerWidth = typeof window.outerWidth != 'undefined' ? window.outerWidth : document.body.clientWidth,
+                outerHeight = typeof window.outerHeight != 'undefined' ? window.outerHeight : (document.body.clientHeight - 22),
+                width    = 800,
+                height   = 450,
+                left     = parseInt(screenX + ((outerWidth - width) / 2), 10),
+                top      = parseInt(screenY + ((outerHeight - height) / 2.5), 10),
+                features = (
+                    'width=' + width +
+                    ',height=' + height +
+                    ',left=' + left +
+                    ',top=' + top
+                );
+            newwindow=window.open('https://www.facebook.com/v2.10/dialog/oauth?client_id=113338116050483&state=e8ed0b215717a20729b45a6f265f7b38&response_type=code&sdk=php-sdk-5.6.0&redirect_uri=http%3A%2F%2Fwww.quarkscm.com%2Fcustomer%2Ffacebook%2Floginv&scope=email','Login_by_facebook',features);
+            if (window.focus) {newwindow.focus()}
+            return false;
+        }
+        function googlelogin(){
+            var  screenX    = typeof window.screenX != 'undefined' ? window.screenX : window.screenLeft,
+                screenY    = typeof window.screenY != 'undefined' ? window.screenY : window.screenTop,
+                outerWidth = typeof window.outerWidth != 'undefined' ? window.outerWidth : document.body.clientWidth,
+                outerHeight = typeof window.outerHeight != 'undefined' ? window.outerHeight : (document.body.clientHeight - 22),
+                width    = 800,
+                height   = 450,
+                left     = parseInt(screenX + ((outerWidth - width) / 2), 10),
+                top      = parseInt(screenY + ((outerHeight - height) / 2.5), 10),
+                features = (
+                    'width=' + width +
+                    ',height=' + height +
+                    ',left=' + left +
+                    ',top=' + top
+                );
+            newwindow=window.open('https://accounts.google.com/o/oauth2/auth?response_type=code&redirect_uri=http%3A%2F%2Fwww.quarkscm.com%2Fcustomer%2Fgoogle%2Floginv&client_id=200579565524-t3r7ojuhoq886gfvoun74glmaagm7qp3.apps.googleusercontent.com&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&access_type=offline&approval_prompt=auto   ','Login_by_facebook',features);
+            if (window.focus) {newwindow.focus()}
+            return false;
+        }
+    </script>	</div>
+<script src="js/jquery-3.0.0.min.js"></script>
+<script src="js/jquery.lazyload.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/js.js"></script>
+<script src="js/banner.js"></script>
+<script src="js/bootstrap-filestyle.min.js"></script>
+<script src="js/jquery.validate.min.js"></script></body>
+</html>
+

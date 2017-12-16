@@ -227,7 +227,6 @@ a.submitbutton{
 }
 
 button.redBtn:focus , button.redBtn:active {
-    background:none;
     box-shadow:none;
 }
 
@@ -518,20 +517,20 @@ del.my_shop_price {
 #footer .sidebar .widget header .title, #footer .sidebar .widget .title-block .title {color: #1e1e1e;font-size: 16px;font-weight: normal;line-height: 1.3;text-transform: uppercase;margin: 5px 0 12px;padding: 0;}
 .footer-top .container .row p {padding: 0 0 16px;}
 #footer .container {margin: auto;width: 1200px;}
-.clear{clear:both}
-
+.clear{clear:both;zoom: 1;}
 #footer .container {margin: auto;width: 1170px;}
 .footer-bottom .container {padding: 12px;text-align: center;}
 .newsletter-container input.input-text {float: left;}
 input.input-text {border: 1px solid #ccc;border-radius: 2px;color: #777;height: 33px;padding: 0 10px;}
 .newsletter-button{background-color: #000;border: 1px solid #000;color: #fff;cursor: pointer;float: left;height: 34px;min-width: 52px;overflow: visible;padding: 0 5px;white-space: nowrap;}
-.newsletter-button:hover{background: #000;filter:alpha(opacity=70);-moz-opacity:0.7;opacity:0.7;}
+.newsletter-button:hover{background: #000;filter:alpha(opacity=80);-moz-opacity:0.8;opacity:0.8;}
 #copy{font-size:11px;}
 #footer ul li{height:22px;}
 .top_currency   .currency_list   ul li{cursor:pointer;}
 
 .two-columns-left .col-main{width:959px;float:right;}
 .two-columns-left .col-left {width:200px;float:left;margin-left: 24px;}
+.two-columns-left .sidebar{margin-left: 0;}
 .col-main h1{font-size:15px;font-weight:100;}
 .col-main .toolbar select.product_sort,.col-main .toolbar select.product_num_per_page{height: 24px;border-radius: 4px;border-color:#ddd;outline: none;}
 .col-main .toolbar select.product_sort{width: 105px;}
@@ -698,17 +697,11 @@ button{
     white-space: nowrap;
 }
 
-button.redBtn  {
-    font-family: Arial;
-    font-size: 0.875em;
-    margin-left: -3px;
-    padding: 0;
-    background:none;
-    height:auto;
-}
+button.redBtn  {font-family: Arial;font-size:16px;color: #fff;height:40px;padding: 0 38px;background: #f90;border-radius: 4px;outline: none;}
+
 button.redBtn:hover{
-    background:none;
     box-shadow:none;
+    filter:alpha(opacity=80);-moz-opacity:0.8;opacity:0.8;
 }
 
 
@@ -731,31 +724,17 @@ button.pinkBtn span {
     font-style: normal;
 }
 
-.account-login .registered-users .buttons-set button {
-    font: bold 14px/35px Segoeui-Bold,Myriad Pro,Verdana,serif;
-    margin: 0 0 0 -3px;
+/*.account-login .registered-users .buttons-set button {*/
+    /*font: bold 14px/35px Segoeui-Bold,Myriad Pro,Verdana,serif;*/
+    /*margin: 0 0 0 -3px;*/
 
-}
+/*}*/
 
 
-.account-login .registered-users .buttons-set a.f-left {
-    color: #777;
-    font-size: 12px;
-    line-height: 35px;
-    width: 160px;
-    float: left;
-    display: block;
-    margin: 2px 0 0 20px;
-}
-
-.registered-users #js_registBtn{
-    width:160px;
-    display:block;
-}
-.fago_login{
-    margin:18px 0 0 -3px;
-}
-
+.account-login .registered-users .buttons-set a.f-left {color: #777;font-size: 12px;line-height: 35px;width: 160px;float: left;display: block;margin: 2px 0 0 20px;}
+.account-login .registered-users .buttons-set a.f-left:hover{text-decoration: underline!important;}
+.fago_login{margin:18px 0 0 -3px;}
+.fago_login img{width: 154px;height: 33px;}
 .account-create  h1 {
     border-bottom: 1px solid #ddd;
     font-size: 22px;
@@ -884,7 +863,8 @@ button.dataUp i {
     border: 1px solid #ddd;
     display: block;
     float: right;
-    height: 30px;
+    height: 32px;
+    vertical-align: middle;
     margin-left: 1px;
     width: 30px;
     cursor: pointer;
@@ -898,10 +878,7 @@ button.dataUp i {
     width: 90px;
 }
 
-.login-captcha-img{
-    border:1px solid #aaa;
-    cursor: pointer;
-}
+.login-captcha-img{border:1px solid #aaa;cursor: pointer;height: 32px;vertical-align: middle;}
 .login-captcha{
     width:277px;
 }
@@ -913,33 +890,18 @@ button.dataUp i {
 
 .account-create form .register-captcha input{
     border: 1px solid #ccc;
-    height: 30px;
+    height: 32px;
     margin: 0;
     padding: 0 0 0 10px;
     width: 90px;
 }
 .forgot-captha{width:276px;}
 
-.account-create form .forgot-captha input ,
-.account-create form .forgot-captha img,
-.account-create form .forgot-captha i{
-    margin-bottom:13px;
-}
-
-
-
-
 /* Sidebar =============================================================================== */
 .block {  margin:0 0 10px; }
 .block .block-title {  padding:0; }
 .block .block-title strong { font-size:14px; font-weight:bold; }
-.block .block-title strong span { color: #4c6b99;
-    font-family: Georgia;
-    font-size: 14px;
-    line-height: 40px;
-    text-decoration: none;
-
-}
+.block .block-title strong span { color: #f39800;font-size: 14px;line-height: 40px;text-decoration: none;}
 .account_center .block-account  .block-title{padding-left:10px;}
 .block .block-title a { text-decoration:none !important; }
 .block .block-subtitle { font-size:13px; font-weight:bold; }
@@ -955,12 +917,7 @@ button.dataUp i {
 .block li.even { background-color:#f6f6f6; }
 
 
-.sidebar .block-account li {
-    background: rgba(0, 0, 0, 0.05);
-    font-size: 12px;
-    margin: 3px 0;
-    padding: 10px 0 10px 16px;
-}
+.sidebar .block-account li {background: rgba(0, 0, 0, 0.05);font-size: 12px;margin: 3px 0;}
 
 
 
@@ -1013,16 +970,10 @@ button.dataUp i {
 .block-account .block-content li.current a{
     font-weight:bold;
 }
-
-.sidebar .block-account li.current {
-    background:rgba(0, 0, 0, 0.1);
-
-}
-.sidebar .block-account li:hover{
-    background:rgba(0, 0, 0, 0.1);
-}
-
-
+/*个人中心左侧导航*/
+.sidebar .block-account li:hover a{color: #f90;}
+.sidebar .block-account li a{display: block;padding: 10px 0 10px 16px;}
+.sidebar .block-account li.current a{background:#f90;color: #fff;}
 .page-title {
     border: medium none;
     margin: 0 0 3px;
@@ -1043,12 +994,7 @@ button.dataUp i {
 
 #form-validate input.input-text {
     color: #333;
-    width: 250px;
-}
-
-.form-list .field {
-    float: left;
-    width: 275px;
+    width: 262px;
 }
 
 .validation-advice {
@@ -1172,11 +1118,8 @@ th {
     white-space: nowrap;
 }
 
-.two-columns-left .account_center{
-    width:960px;float:right;
-
-}
-
+.two-columns-left .account_center{width:960px;float:right;}
+.two-columns-left .account_center .std{padding: 16px 0 0 16px;}
 .edit_order thead tr {
     background: #f7f7f7 none repeat scroll 0 0;
 }
@@ -1424,19 +1367,7 @@ input.cancel {
     padding: 22px 25px 12px 33px;
 }
 
-.fieldset .legend {
-    background: #dedede none repeat scroll 0 0;
-    border: 1px solid #fefefe;
-    color: #333;
-    float: left;
-    font-size: 13px;
-    font-weight: bold;
-    margin: -33px 0 0 -10px;
-    padding: 0 8px;
-    position: relative;
-}
-
-
+.fieldset .legend {background: #dedede;border: 1px solid #fefefe;color: #333;float: left;font-size: 13px;font-weight: bold;margin: -41px 0 0 -10px;padding: 8px;position: relative;}
 #form-validate ul li {
     margin: 11px 0;
 }
@@ -1445,10 +1376,7 @@ input.cancel {
 }
 
 
-.form-list .field {
-    float: left;
-    width: 275px;
-}
+.form-list .field {float: left;}
 
 #form-validate ul li label {
     display: block;
@@ -1462,7 +1390,7 @@ input.cancel {
     display: block;
     width: 375px;
 }
-
+.form-list .forgot-captha{width:285px;}
 .verification_code_input {
     height: 30px;
     padding: 0 10px;
@@ -1495,10 +1423,7 @@ input.cancel {
 .login-captcha-input{height: 30px;
     padding: 0 10px;
     width: 76px;}
-.account-register  .form-list .input-box{width:272px;}
-
-
-
+.account-register  .form-list .input-box{width:282px;}
 .account-register .back-link {
     display: block;
     float: left;
@@ -1573,9 +1498,10 @@ input.cancel {
 }
 
 .addtocart{margin:20px 0 0;padding-left: 5px;}
-#js_registBtn{float:left;padding: 2px 20px;font-size:16px;background: #f90;color: #fff;border-radius: 4px;outline: none;}
-#js_registBtn:hover{filter:alpha(opacity=80);-moz-opacity:0.8;opacity:0.8;}
 
+#js_registBtn{float:left;}
+#js_registBtn:hover{filter:alpha(opacity=80);-moz-opacity:0.8;opacity:0.8;}
+.redBtn em{font-style: normal;font-family: Arial;}
 .redBtn span i{font-size: 26px;vertical-align: middle;margin-right: 5px;}
 .myFavorite_nohove {
     float: left;
@@ -2043,16 +1969,29 @@ span.description {
 
 .buy_also_buy .scrollBox{height:280px;}
 .buy_also_buy .scrollBox .item{width: 180px;padding: 0 10px;}
+/*购物车顶部导航步骤*/
+.shop_process {width: 760px;height: 26px;font-size:14px;color:#666;float: right;margin-top: 10px;}
+.shop_process li {height: 26px;line-height: 26px;background-color: #f5f5f5;float: left;color: #666;text-align: center;position: relative;margin-left: 22px;}
+/*第一个li*/
+.shop_process .current_state{width: 236px;background: #f90;color: #fff;}
+.shop_process .current_state:after{content: "";position: absolute;width: 0;height: 0;border-width: 14px 8px 12px 17px;border-style: solid;}
+.shop_process .current_state:after {top: 0;right: -25px;border-color: transparent transparent transparent #f90;}
 
+/*第二个li*/
+.shop_process .nocurrent_state{width: 271px;}
+.shop_process .nocurrent_state:before,.shop_process .nocurrent_state:after{content: "";position: absolute;width: 0;height: 0;border-width: 14px 8px 12px 17px;border-style: solid;}
+.shop_process .nocurrent_state:before{top: 0;left: 0;border-color: transparent transparent transparent #fff;}
+.shop_process .nocurrent_state:after{top: 0;right: -25px;border-color: transparent transparent transparent #f5f5f5;}
 
+/*第三个li*/
+.shop_process .normal_state{width: 184px;}
+.shop_process .normal_state:before{content: "";position: absolute;width: 0;height: 0;border-width: 14px 8px 12px 17px;border-style: solid;}
+.shop_process .normal_state:before{top: 0;left: 0;border-color: transparent transparent transparent #fff;}
 
+/*当前active*/
+.shop_process li.current_active{background: #f90;color: #fff;}
+.shop_process li.current_active:after{ border-color: transparent transparent transparent #f90;}
 
-.shopping-cart-img {
-    background: rgba(0, 0, 0, 0) url("../images/scart_step1.gif") repeat scroll 0 0;
-    height: 36px;
-    margin: 20px auto 5px;
-    width: 834px;
-}
 .shopping-cart-div {
     position: relative;
 }
@@ -2083,13 +2022,7 @@ span.description {
     text-align: center !important;
 }
 
-.cartqtydown {
-    background: rgba(0, 0, 0, 0) url("../images/jj.png") no-repeat scroll -4px -1px;
-    float: left;
-    height: 10px;
-    margin: 12px 4px 0 0;
-    width: 10px;
-}
+.cartqtydown {float: left;border: 1px solid #ccc;padding: 0 5px;height: 33px;line-height: 33px;margin-right: -1px;border-bottom-left-radius: 4px;border-top-left-radius: 4px;}
 
 
 #shopping-cart-table .qty {
@@ -2099,27 +2032,12 @@ span.description {
     width: 25px !important;
 }
 
-a.cartqtyup {
-    background: rgba(0, 0, 0, 0) url("../images/jj.png") no-repeat scroll -4px -25px;
-    float: left;
-    height: 10px;
-    margin: 12px 0 0 3px;
-    width: 10px;
-}
+a.cartqtyup {float: left;border: 1px solid #ccc;padding: 0 5px;height: 33px;line-height: 33px;margin-left: -1px;border-bottom-right-radius: 4px;border-top-right-radius: 4px;}
 
 .cart .cart-collaterals {
     padding: 25px 0 0;
 }
-.btn-remove2 {
-    background: rgba(0, 0, 0, 0) url("../images/btn_trash.gif") no-repeat scroll 0 0;
-    display: block;
-    font-size: 0;
-    height: 16px;
-    line-height: 0;
-    overflow: hidden;
-    text-indent: -999em;
-    width: 16px;
-}
+.btn-remove2 {display: block;height: 20px;line-height: 20px;overflow: hidden;width: 22px;font-size: 24px;}
 
 
 #discount-coupon-form .discount-form label {
@@ -2139,16 +2057,7 @@ body #discount-coupon-form div.buttons-cou {
 }
 
 
-.discount-form .submitbutton {
-    background: #ccc none repeat scroll 0 0;
-    border-radius: 0;
-    font-size: 14px;
-    height: 31px;
-    line-height: 31px;
-}
-
-
-
+.discount-form .submitbutton {background: #f39800;border-radius: 0;font-size: 14px;height: 31px;line-height: 31px;}
 .cart .totals {
     float: right;
     width: 494px;
@@ -2163,11 +2072,7 @@ body #discount-coupon-form div.buttons-cou {
     text-align: right;
 }
 
-#shopping-cart-totals-table2 {
-    border-top: 1px solid #333;
-    font-size: 14px;
-    margin: 16px 0 0;
-}
+#shopping-cart-totals-table2 {font-size: 14px;}
 
 .cart .totals table th, .cart .totals table td {
     padding: 5px;
@@ -2191,29 +2096,14 @@ body #discount-coupon-form div.buttons-cou {
 strong {
     font-weight: bold;
 }
-#shopping-cart-totals-table2 .a-right {
-    color: #2ab4c4;
-    font-size: 18px;
-}
-#shopping-cart-totals-table2 .a-right {
-    color: #2ab4c4;
-    font-size: 18px;
-}
-
+#shopping-cart-totals-table2 .a-right {color: #f60;font-size: 18px;}
 
 .proceed_to_checkout {
     margin-top: 35px;
     text-align: right;
 }
-
-
-
-.proceed_to_checkout button.button {
-    display: block;
-    float: right;
-}
-
-
+.proceed_to_checkout button.button {display: block;float: right;background: #f90;padding: 0 8px;}
+.proceed_to_checkout button.button:hover {filter:alpha(opacity=80);-moz-opacity:0.8;opacity:0.8;}
 a.express_paypal{
     background: rgba(0, 0, 0, 0) url("../images/paypaltopay.jpg") repeat scroll 0 0;
     display: block;
@@ -2230,9 +2120,7 @@ a.express_paypal{
     margin: 0 5px;
 }
 
-.proceed_to_checkout button.button span {
-    font-size: 20px;
-}
+.proceed_to_checkout button.button span {font-size: 16px;padding: 0;}
 
 
 .cart-collaterals .col2-set .col-2 {
@@ -2263,9 +2151,7 @@ body #discount-coupon-form div.buttons-cou {
 }
 
 
-.discount-form .submitbutton:hover{
-    background-color:#4c8b99;
-}
+.discount-form .submitbutton:hover{background-color:#f39800;box-shadow:none;-moz-box-shadow: none;-webkit-box-shadow: none;filter:alpha(opacity=80);-moz-opacity:0.8;opacity:0.8;}
 
 h2 {
     font-size: 18px;
@@ -2277,11 +2163,8 @@ h2 {
 .a-center {
     text-align: center !important;
 }
-.product-name {
-    font-size: 1em;
-    font-weight: normal;
-}
-
+.product-name {font-size: 1em;font-weight: normal;margin-bottom: 4px;max-height: 30px;overflow: hidden;}
+.product-name a:hover{color: #f39800;}
 
 .product_info .price_info .no-special {
     line-height: 30px;
@@ -2491,14 +2374,9 @@ a.icon-google:hover{
 }
 
 
-.shopping-cart-div .data-table tr th {
-    border-color: #ccc currentcolor;
-    border-style: solid none;
-    border-width: 1px medium;
-    height: 20px;
-}
-
-
+.shopping-cart-div .data-table tr th {border-color: #ccc currentcolor;border-style: solid none;border-width: 1px medium;height: 20px;}
+.shopping-cart-div .data-table tr th.a-center{width: 95px;}
+.shopping-cart-div .data-table tr th:last-child{width: 40px;}
 .shippingmethods .attention a::before {
     background: #f60 none repeat scroll 0 0;
     border-radius: 100%;
@@ -2525,13 +2403,6 @@ a.icon-google:hover{
     font-size:12px;
 }
 
-
-.cart_p_img  .shopping-cart-img {
-    background: rgba(0, 0, 0, 0) url("../images/scart_step1.gif") repeat scroll 0 0;
-    height: 36px;
-    margin: 8px auto 5px;
-    width: 834px;
-}
 
 
 .cart_p_img {
