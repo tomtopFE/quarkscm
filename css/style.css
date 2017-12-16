@@ -1974,18 +1974,18 @@ span.description {
 .shop_process li {height: 26px;line-height: 26px;background-color: #f5f5f5;float: left;color: #666;text-align: center;position: relative;margin-left: 22px;}
 /*第一个li*/
 .shop_process .current_state{width: 236px;background: #f90;color: #fff;}
-.shop_process .current_state:after{content: "";position: absolute;width: 0;height: 0;border-width: 14px 8px 12px 17px;border-style: solid;}
-.shop_process .current_state:after {top: 0;right: -25px;border-color: transparent transparent transparent #f90;}
+.shop_process .current_state:after{content: "";position: absolute;width: 0;height: 0;border-width: 13px 0px 13px 13px;border-style: solid;}
+.shop_process .current_state:after {top: 0;right: -13px;border-color: transparent transparent transparent #f90;}
 
 /*第二个li*/
 .shop_process .nocurrent_state{width: 271px;}
-.shop_process .nocurrent_state:before,.shop_process .nocurrent_state:after{content: "";position: absolute;width: 0;height: 0;border-width: 14px 8px 12px 17px;border-style: solid;}
+.shop_process .nocurrent_state:before,.shop_process .nocurrent_state:after{content: "";position: absolute;width: 0;height: 0;border-width: 13px 0px 13px 13px;border-style: solid;}
 .shop_process .nocurrent_state:before{top: 0;left: 0;border-color: transparent transparent transparent #fff;}
-.shop_process .nocurrent_state:after{top: 0;right: -25px;border-color: transparent transparent transparent #f5f5f5;}
+.shop_process .nocurrent_state:after{top: 0;right: -13px;border-color: transparent transparent transparent #f5f5f5;}
 
 /*第三个li*/
 .shop_process .normal_state{width: 184px;}
-.shop_process .normal_state:before{content: "";position: absolute;width: 0;height: 0;border-width: 14px 8px 12px 17px;border-style: solid;}
+.shop_process .normal_state:before{content: "";position: absolute;width: 0;height: 0;border-width: 13px 0px 13px 13px;border-style: solid;}
 .shop_process .normal_state:before{top: 0;left: 0;border-color: transparent transparent transparent #fff;}
 
 /*当前active*/
