@@ -1,0 +1,21 @@
+/*
+ *@名称:  
+ *@作者： 
+ *@日期： 
+ *@参数:  
+ *@描述：
+ *        
+ *@返回:
+ */
+var TT_NS = (function(NS, $){
+    var $menu_li = $(".menu_list li");
+    $menu_li.mouseenter(function() {
+        $(this).addClass("selected").siblings().removeClass("selected");
+        $(this).children("div").show();
+    })
+    $menu_li.mouseleave(function(){
+        $(this).removeClass("selected");
+        $(this).children("div").hide();
+    })
+})(window.TT_NS || {}, jQuery);
+
