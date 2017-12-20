@@ -438,7 +438,9 @@ address, article, aside, audio, canvas, details, figcaption, figure, footer, hea
 .mt10 {
     margin-top: 42px;
 }
-
+.sectionBox_h {
+    text-transform: Uppercase;
+}
 .sectionBox_h {color: #010101;font-size: 24px;height: 25px;line-height: 25px;padding-bottom: 10px;padding-top: 10px;}
 .sectionBox_h span {font-family: source_sans_prosemibold,Arial,sans-serif;}
 .sectionBox_h em a {color: #999;float: right;font-family: source_sans_proregular,Arial,sans-serif;font-size: 14px;line-height: 35px;}
@@ -2595,6 +2597,6 @@ img.red_login_img {
     vertical-align: bottom;
 }
 /*底部单页面样式*/
-.col-main h1.page_title{padding:10px 0 20px 20px;}
+.col-main h1.page_title{padding:10px 0 20px 20px;font-size: 21px;text-transform: Uppercase;}
 .col-main>div.page_content{padding: 0 20px 20px 25px;color: #666;font-size: 14px;/*font-family: 'Verdana','sans-serif';*/}
 .col-main>div.page_content p strong{color: #333;font-size: 16px;}
