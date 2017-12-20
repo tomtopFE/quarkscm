@@ -195,7 +195,7 @@ a.submitbutton:hover{color: #ffffff;}
 a.submitbutton{
     height: 35px;
     display: block;
-    background: #4c6b99;
+    background: #f90;
     color: #fafafa;
     text-align: center;
     font: bold 14px/35px Segoeui-Bold, Arial, Verdana, serif;
@@ -642,6 +642,7 @@ input.input-text {border: 1px solid #ccc;border-radius: 2px;color: #777;height: 
     clear: both;
 }
 .col2-set {
+    padding-bottom: 12px;
     overflow: hidden;
 }
 .account-login .new-users .content {
@@ -975,7 +976,7 @@ button.dataUp i {
 /*个人中心左侧导航*/
 .sidebar .block-account li:hover a{color: #f90;}
 .sidebar .block-account li a{display: block;padding: 10px 0 10px 16px;}
-.sidebar .block-account li.current a{background:#f90;color: #fff;}
+.sidebar .block-account li.current a{background:#bebebe;color: #fff;}
 .page-title {
     border: medium none;
     margin: 0 0 3px;
@@ -1039,20 +1040,19 @@ table {
 
 
 .cpointer {
-    background: #ccc none repeat scroll 0 0;
+    background: #ccc;
     border: 0 none;
     color: #fff;
     cursor: pointer;
     font-family: verdana;
     font-size: 11px;
-    height: 20px;
-    line-height: 20px;
-
+    border-radius: 4px;
+    padding: 3px 6px 6px 6px;
 }
 
 
 .addnew.cpointer {
-    background: #59b7c2 none repeat scroll 0 0;
+    background: #f90;
     height: 25px;
     margin: 10px 0;
 }
@@ -1066,10 +1066,11 @@ table {
 
 
 .addressbook tr td.ltp a {
+    font-size: 24px;
     color: #666;
     display: block;
-    height: 20px;
-    line-height: 25px;
+    height: 25px;
+    line-height: 30px;
     margin: 0 0 0 4px;
     text-decoration: underline;
 }
@@ -1281,8 +1282,9 @@ td:nth-child(2n) {
     height:30px;line-height:30px;margin-top: 10px;
 }
 .favorite-Operation a{
-    text-align:center;display:inline-block;width:70px;height:30px;border:1px solid #ccc;cursor:pointer
+    text-align:center;display:inline-block;width:70px;height:30px;cursor:pointer;color: #333;background: #fff;border: 1px solid #b3b3b3;border-radius: 4px;
 }
+.favorite-Operation a:hover{background: #e6e6e6;}
 .favorite-Operation-main {
     padding: 10px;
     height: 128px;
@@ -2441,11 +2443,11 @@ a.icon-google:hover{
 }
 .account_center .payment-method{
     margin-top:20px;
+    padding-right: 15px;
 }
 .account_center .payment-method dl.on{
     display:block;
-    border: 1px solid #cc0000;
-    display: block;
+    border: 1px solid #f90;
 }
 .account_center .payment-method dl{
     border: 2px solid #fff;
@@ -2485,19 +2487,20 @@ a.icon-google:hover{
 
 .center-content.place-multi-order section.upload .file-box {
     display: inline-block;
-    padding-left: 3px;
-    border: 1px solid #ddd;
+    padding: 3px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
     height: 27px;
     line-height: 27px;
     vertical-align: middle;
 }
 
 .center-content.place-multi-order section.upload button {
-    border: 1px solid #da0120;
+    border: 1px solid #f90;
     padding: 6px 9px;
-    background-color: #fef0f2;
-    color: #da0120;
-    border-radius: 2px;
+    background-color: #fff;
+    color: #f90;
+    border-radius: 4px;
     display: inline;
     height: auto;
     line-height: 15px;
@@ -2511,13 +2514,13 @@ a.icon-google:hover{
 
 .center-content.place-multi-order section.download a {
     padding: 10px 9px;
-    background-color: #da0120;
+    background-color: #f90;
     color: #fff;
     text-align: center;
     border-radius: 2px;
 
 }
-
+.center-content.place-multi-order section.download a:hover{filter:alpha(opacity=80);-moz-opacity:0.8;opacity:0.8;}
 #my-orders-table .moderated{color:#aaa;font-weight:bold}
 #my-orders-table .cancel{color:#777;font-weight:bold}
 #my-orders-table .pending{color:#cc0000;font-weight:bold}
@@ -2534,7 +2537,7 @@ a.icon-google:hover{
 .homepage  .scrollBox{float: none;}
 .homepage  .proName a{color: #666;height: 35px;display: block;overflow: hidden;padding: 1px 12px;}
 .homepage  .proName a:hover{color: #f39800;}
-.balance .submitbutton:hover{background:#59b7a8;}
+.balance .submitbutton:hover{filter:alpha(opacity=80);-moz-opacity:0.8;opacity:0.8;}
 #google_translate_element{width: 118px;margin: auto;float: left;height: 30px;  }
 #footer .row .social{display:none;}
 .icon-sale {
@@ -2596,6 +2599,22 @@ img.red_login_img {
     height : 25px;
     vertical-align: bottom;
 }
+/*个人中心页面*/
+/*account information*/
+.std .buttons-set button.button{background: #f90;border-radius: 4px;}
+.std .buttons-set button.button:hover{filter:alpha(opacity=80);-moz-opacity:0.8;opacity:0.8;}
+/*account balance*/
+.std button.topup_amount{background: #f90;}
+.std button.topup_amount:hover{filter:alpha(opacity=80);-moz-opacity:0.8;opacity:0.8;}
+.std .top-up-amount input#recharge-amount{width: 160px;height: 28px;border-radius: 4px;border: 1px solid #ccc;}
+.std .form-list .btn-theme {background: #f90;border: navajowhite;border-radius: 4px;}
+.std .form-list .btn-theme:hover {filter:alpha(opacity=80);-moz-opacity:0.8;opacity:0.8;}
+.std .download .bootstrap-filestyle{outline: none;}
+.std p.tr button.submit_order{background: #f90;border: none;border-radius: 4px;}
+.std p.tr button.submit_order:hover{background: #f90;filter:alpha(opacity=80);-moz-opacity:0.8;opacity:0.8;}
+/*my order*/
+.std .page-title form input[type="submit"]{color: #fff;border: none;}
+.std .page-title>button#download_order{background: #f90;color: #fff;border: none}
 /*底部单页面样式*/
 .col-main h1.page_title{padding:10px 0 20px 20px;font-size: 21px;text-transform: Uppercase;}
 .col-main>div.page_content{padding: 0 20px 20px 25px;color: #666;font-size: 14px;/*font-family: 'Verdana','sans-serif';*/}
