@@ -439,7 +439,7 @@ address, article, aside, audio, canvas, details, figcaption, figure, footer, hea
     margin-top: 42px;
 }
 .sectionBox_h {
-    text-transform: Uppercase;
+    text-transform: capitalize;
 }
 .sectionBox_h {color: #010101;font-size: 24px;height: 25px;line-height: 25px;padding-bottom: 10px;padding-top: 10px;}
 .sectionBox_h span {font-family: source_sans_prosemibold,Arial,sans-serif;}
