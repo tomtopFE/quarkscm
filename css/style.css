@@ -212,15 +212,15 @@ a.submitbutton{
 
 
 .submitbutton:hover{
-    background: #4c6b99;
-    box-shadow: 0px 0px 2px #4c6b99;
+    background: #e7bb78;
+    box-shadow: 0px 0px 2px #ffb241;
     -moz-box-shadow: 0px 0px 2px #4c6b99;
     -webkit-box-shadow: 0px 0px 2px #4c6b99;
     text-decoration:none;
 }
 .submitbutton:active,
 .submitbutton:focus{
-    background: #4c6b99;
+    background: #ffb241;
     box-shadow: inset 0px 0px 10px #4c6b99;
     -moz-box-shadow: inset 0px 0px 10px #4c6b99;
     -webkit-box-shadow: inset 0px 0px 10px #4c6b99;
@@ -441,7 +441,7 @@ address, article, aside, audio, canvas, details, figcaption, figure, footer, hea
 .sectionBox_h {
     text-transform: capitalize;
 }
-.sectionBox_h {color: #010101;font-size: 24px;height: 25px;line-height: 25px;padding-bottom: 10px;padding-top: 10px;}
+.sectionBox_h {color: #010101;font-size: 24px;height: 25px;line-height: 25px;padding-bottom: 15px;padding-top: 15px;}
 .sectionBox_h span {font-family: source_sans_prosemibold,Arial,sans-serif;}
 .sectionBox_h em a {color: #999;float: right;font-family: source_sans_proregular,Arial,sans-serif;font-size: 14px;line-height: 35px;}
 
@@ -713,6 +713,11 @@ button.redBtn:hover{
 }
 
 button.redBtn em.icon_cart {font-size: 26px;vertical-align: middle;margin-right: 5px;}
+
+button.pinkBtn{
+    background: #f90;
+    border-radius: 4px;
+}
 
 button.pinkBtn span {
     background-color: #59b7c2;
@@ -2619,3 +2624,12 @@ img.red_login_img {
 .col-main h1.page_title{padding:10px 0 20px 20px;font-size: 21px;text-transform: Uppercase;}
 .col-main>div.page_content{padding: 0 20px 20px 25px;color: #666;font-size: 14px;/*font-family: 'Verdana','sans-serif';*/}
 .col-main>div.page_content p strong{color: #333;font-size: 16px;}
+
+button.disabled, btn.disabled, .btn[disabled], fieldset[disabled] .btn {
+    background-color: #aeb4b5;
+    cursor: not-allowed;
+    filter: alpha(opacity=65);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    opacity: .65;
+}
