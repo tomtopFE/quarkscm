@@ -1977,6 +1977,7 @@ span.description {
 .buy_also_buy .scroll_left{margin: 15px 10px 15px 10px;border-bottom: 1px solid #ccc;}
 
 .buy_also_buy .scrollBox{height:280px;}
+.buy_also_buy .scrollBox .viewport{height: 100%;}
 .buy_also_buy .scrollBox .item{width: 180px;padding: 0 10px;}
 /*购物车顶部导航步骤*/
 .shop_process {width: 760px;height: 26px;font-size:14px;color:#666;float: right;margin-top: 10px;}
