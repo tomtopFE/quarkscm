@@ -541,9 +541,9 @@ input.input-text {border: 1px solid #ccc;border-radius: 2px;color: #777;height: 
 .category_product ul{margin:0 0 10px ;}
 .category_product ul li {float:left;width:215px;height:395px;padding: 6px 12px;position: relative;}
 .category_product ul li .favorite_click{display: inline-block;position: absolute;top: 340px;right: 16px}
-.category_product ul li .c_loginPrice{height: 24px;line-height: 24px;}
-.category_product ul li .c_loginPrice i.icon_myaccount{font-size: 24px;vertical-align: middle;color: #f60;}
-.category_product ul li .c_loginPrice span{color: #f60;}
+.c_loginPrice{height: 24px;line-height: 24px;}
+.c_loginPrice i{font-size: 24px;vertical-align: middle;color: #f60;}
+.c_loginPrice a>span{color: #f60;}
 .restocking{
     border: 1px solid #cc0000;
     color: #cc0000;
