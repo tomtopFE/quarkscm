@@ -480,3 +480,6 @@
 .product_description_info .tab-pane .description_img{margin-top: 16px;}
 /*产品详情页面介绍*/
 .product_description_info .tab-pane p img{width: auto;height: auto;}
+/*限价*/
+.platform_price{border: 1px solid #777;    padding: 0 5px;}
+.platform_price.more{display: none;}
