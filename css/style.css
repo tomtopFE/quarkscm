@@ -1916,7 +1916,7 @@ span.description {
 }
 
 .product_options a.active , .product_options a.active_v{
-    border: 1px solid #777;
+    border: 1px solid #ccc;
 
 }
 
