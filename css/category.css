@@ -1,0 +1,3 @@
+/*类目页首页导航隐藏*/
+.m_nav_category .nav_l ul{display: none;}
+.m_nav_category .nav_l:hover ul{display: block;}

@@ -1,0 +1,35 @@
+//引入颜色配置less
+@import "../module_less/basis/b_color.less";
+
+.overflowWrap{overflow:hidden;text-overflow: ellipsis;white-space: nowrap;}
+//nav 宽度
+#newnav{box-sizing: border-box;width: 1200px;margin:10px auto;height: 40px;position: relative;}
+.nav_left{box-sizing: border-box;position:relative;float:left;width: 19%;background-color: @c;height: 40px;line-height: 40px;
+  >div{width:100%;position:relative;text-align: center;
+    >p{font-size:14px;color: @cWhite;width:90%}
+    >i{position: absolute;right:10px;top:7px;background-image:url(../img/iconTop.png);background-position: -66px -5px;background-repeat: no-repeat;display: inline-block;width:20px;height:20px;vertical-align: middle;}
+  }
+}
+.menu_list{box-sizing: border-box;z-index:9999;position: absolute;top:40px;left: 0;width:100%;background-color: @cWhite;border:1px solid @cGrey02;border-radius: 0 0 5px 5px;
+  >li{padding-left: 10px;
+    >a{box-sizing: border-box;width: 90%;display: block; height: 29px;font-size: 12px;position:relative;line-height: 29px;
+      >i{position: absolute;display: inline-block;width: 20px;height: 20px;right: -7px;top:5px;background-image: url(../img/iconTop.png);background-repeat:no-repeat ;background-position:-95px -6px ;vertical-align: middle;}
+    }
+  }
+}
+.menu_connet{box-sizing: border-box;display: none;position: absolute;z-index:10000;left:100%;top:-1px;min-height: 466px;width:431%;border:1px solid @cGrey02;background-color: @cWhite;border-top:0;
+  >dl{float:left;width: 33%;padding-left: 5px;box-sizing: border-box;
+    >dt{font-size: 14px;line-height: 25px;box-sizing: border-box;}
+    >dd{font-size:12px ;line-height: 20px;box-sizing: border-box;}
+  }
+}
+.nav_right{box-sizing: border-box;float: left;width: 81%;background-color:@cGrey05;border:1px solid @cGrey02;height:40px;line-height: 39px;
+  >li{color:@blue;float:left;padding-left: 5px;border-right: 1px solid @cGrey02;box-sizing: border-box;}
+}
+//轮播图片的高度
+#owl-fecshop .item img{height:466px}
+.banner-slider{position: absolute;top:40px;left:19%;width:81%;height: 466px;z-index: 100;}
+.selected{background-color: @cGrey04;border-top:1px solid @cGrey02;border-bottom: 1px solid @cGrey02;}
+.main-container{margin-top:470px}
+
+
