@@ -24,7 +24,7 @@
 		}
 	}
 	.m_head_acount{
-		.lineBlock(@align:middle);margin-right:40px;font-size:13px;
+		.lineBlock(@align:middle);font-size:13px;
 	    .bm_dropdown{
 			&.openD{
 				.dropdown_link{background:#fff;border-color:#fff}
@@ -49,9 +49,10 @@
 		i{font-size:36px;color:#666;}
 	    h5{padding-top:5px;a{font-size:14px;color:#333;font-weight:bold;text-transform:uppercase;}}
 	}
-	.favoritesHeader{display:inline-block;font-size:14px;position:relative;line-height:36px;vertical-align: middle;text-decoration: none;
-	  .icon_wishlist{font-size:36px;position:absolute;left:-36px;color:#666;}
-	  p{max-width:70px;overflow:hidden;.strLen;}
+	.favoritesHeader{display:inline-block;width:36px;height:36px;font-size:14px;position:relative;line-height:36px;vertical-align: middle;text-decoration: none;margin: 0 5px;position: relative;
+	  	.icon_bell{font-size:36px;color:#666;}
+		&>i{display:block;position: absolute;top:-3px;right:0;background:#f90;width: 16px;height: 16px;line-height:16px;font-size: 13px;border-radius: 50%;text-align: center;color: #fff;font-style: normal;}
+	  	p{max-width:70px;overflow:hidden;.strLen;}
 	}
     &.head_fixed{
        position:fixed;top:0;z-index:100;.border;border-width:0 0 1px;
