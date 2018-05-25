@@ -1,5 +1,5 @@
 /*******************新增样式******************************/
-.containIcon{min-width: 1200px;font-size: 0;margin-top: 42px;}
+.containIcon{min-width: 1200px;font-size: 0;/*margin-top: 42px; */padding: 10px 0;}
 .containIcon>div{width: 190px;padding:14px 4px 0;text-align:center;word-wrap: break-word;white-space: normal;}
 
 .containIcon>div p{color: #9F9C9F;line-height:16px;height:34px;overflow : hidden;}

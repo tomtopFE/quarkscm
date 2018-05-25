@@ -447,7 +447,7 @@ address, article, aside, audio, canvas, details, figcaption, figure, footer, hea
     text-transform: capitalize;
 }
 .sectionBox_h {color: #010101;font-size: 24px;height: 25px;line-height: 25px;padding-bottom: 12px;padding-top: 10px;}
-.sectionBox_h span {font-family: Bitter,Myriad Pro,Verdana,serif;color: #333;}
+.sectionBox_h span {font-family: Bitter,Myriad Pro,Verdana,serif;color: #f39800;font-size: 18px;}
 .sectionBox_h em a {color: #999;float: right;font-family: source_sans_proregular,Arial,sans-serif;font-size: 14px;line-height: 35px;}
 .sectionBox_h em a:hover{color: #f39800;}
 /*产品*/
