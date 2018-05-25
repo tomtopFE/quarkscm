@@ -447,7 +447,7 @@ address, article, aside, audio, canvas, details, figcaption, figure, footer, hea
     text-transform: capitalize;
 }
 .sectionBox_h {color: #010101;font-size: 24px;height: 25px;line-height: 25px;padding-bottom: 12px;padding-top: 10px;}
-.sectionBox_h span {font-family: Bitter,Myriad Pro,Verdana,serif;font-weight: bold;color: #333;}
+.sectionBox_h span {font-family: Bitter,Myriad Pro,Verdana,serif;color: #333;}
 .sectionBox_h em a {color: #999;float: right;font-family: source_sans_proregular,Arial,sans-serif;font-size: 14px;line-height: 35px;}
 .sectionBox_h em a:hover{color: #f39800;}
 /*产品*/
@@ -463,7 +463,7 @@ address, article, aside, audio, canvas, details, figcaption, figure, footer, hea
 .scrollBox .proPrice .f14{font-weight: 700;margin-right: 5px;color: #f60;}
 .scrollBox span.my_shop_price{font-family: source_sans_prosemibold,Arial,sans-serif;font-size: 20px;}
 .f14 {font-size: 14px;}
-.scrollBox del.my_shop_price{font-family: source_sans_proregular,Arial,sans-serif;font-size: 12px;}
+.scrollBox del.my_shop_price{font-family: source_sans_proregular,Arial,sans-serif;font-size: 12px;font-weight: normal;}
 del.my_shop_price{color: #999;font-size: 13px;}
 .footer-container {margin-top: 30px;}
 .footer_fixed {bottom: 22px;position: fixed;right: 22px;z-index: 99;}
@@ -2622,7 +2622,7 @@ button.disabled, btn.disabled, .btn[disabled], fieldset[disabled] .btn {
 .floor_l ul li a:hover{color:#f39800;}
 .floor_l ul li:first-child{display:table-cell;width:216px;height: 80px;padding-left: 16px;vertical-align:middle;border-top:1px solid #f39800;box-shadow:2px 2px 12px 2px #ddd;}
 .floor_l ul li:first-child a{color:#f39800;position: relative;}
-.floor_l ul li:first-child span{display: inline-block;width: 50%;line-height:1.3;vertical-align:middle;font-size: 18px;font-weight: bold;}
+.floor_l ul li:first-child span{display: inline-block;width: 80%;line-height:1.3;vertical-align:middle;font-size: 18px;font-weight: bold;}
 .floor_l ul li:first-child a i{font-size:22px;position: absolute;right: 25px;}
 .floor_l ul li:nth-child(2){margin-top: 26px;}
 .floor_r{width: 958px;}
