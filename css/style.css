@@ -440,11 +440,14 @@ address, article, aside, audio, canvas, details, figcaption, figure, footer, hea
 .mt10 {
     margin-top: 42px;
 }
+.mt20{
+    margin-top: 20px;
+}
 .sectionBox_h {
     text-transform: capitalize;
 }
-.sectionBox_h {color: #010101;font-size: 24px;height: 25px;line-height: 25px;padding-bottom: 15px;padding-top: 15px;}
-.sectionBox_h span {font-family: source_sans_prosemibold,Arial,sans-serif;}
+.sectionBox_h {color: #010101;font-size: 24px;height: 25px;line-height: 25px;padding-bottom: 12px;padding-top: 10px;}
+.sectionBox_h span {font-family: Bitter,Myriad Pro,Verdana,serif;font-weight: bold;color: #333;}
 .sectionBox_h em a {color: #999;float: right;font-family: source_sans_proregular,Arial,sans-serif;font-size: 14px;line-height: 35px;}
 .sectionBox_h em a:hover{color: #f39800;}
 /*产品*/
@@ -464,8 +467,9 @@ address, article, aside, audio, canvas, details, figcaption, figure, footer, hea
 del.my_shop_price{color: #999;font-size: 13px;}
 .footer-container {margin-top: 30px;}
 .footer_fixed {bottom: 22px;position: fixed;right: 22px;z-index: 99;}
-#goTop, .cus_survey, .go_bottom {background: rgba(0, 0, 0, 0) url("../images/footer_fixed.png") no-repeat scroll 0 0;  display: block;height: 40px;margin: 0 0 -1px;text-indent: -999em;width: 43px;}
-.go_top {height: 42px;}
+#goTop, .cus_survey, .go_bottom {background: rgba(0, 0, 0, 0) url("../images/footer_fixed.png") no-repeat scroll 0 0;  display: block;height: 40px;margin: 0 0 -1px;text-indent: -999em;width: 43px;background-position: 0 -1px;}
+
+#goTop{height: 41px;}
 .cus_survey {background-position: 0 -41px;}
 .footer_fixed .ph {display: block;height: 42px;}
 .go_bottom {background-position: 0 -119px;height: 43px;  }
@@ -2612,7 +2616,7 @@ button.disabled, btn.disabled, .btn[disabled], fieldset[disabled] .btn {
 .floor{width: 100%;font-size: 0;font-family: source_sans_prosemibold,Arial,sans-serif!important;}
 .floor>div{font-size: 13px;display: inline-block;vertical-align: top;}
 .floor_l{width: 232px;margin-right: 10px;background: #fff;}
-.floor_l ul{max-height: 550px;overflow: hidden;}
+.floor_l ul{max-height: 550px;height: 550px;overflow: hidden;}
 .floor_l ul li{line-height: 36px;padding-left: 26px;}
 .floor_l ul li a{display:block;color: #666;}
 .floor_l ul li a:hover{color:#f39800;}
@@ -2647,6 +2651,6 @@ button.disabled, btn.disabled, .btn[disabled], fieldset[disabled] .btn {
 .m_brand li:hover{border-color: #efefef;box-shadow: 1px 2px 3px #ddd;}
 
 /*楼层*/
-.nav_content{padding: 0 1px;}
-.nav_content li{text-align:center;font-size:24px;border-left: 1.4px solid #ccc;border-right: 2px solid #ccc;border-bottom: 1px solid #ccc;}
+.nav_content{padding: 0 1px;background: #fff;}
+.nav_content li{text-align:center;font-size:24px;border-left: 1.4px solid #ccc;border-right: 2px solid #ccc;border-top: 1px solid #ccc;}
 .nav_content li.floor_nav_cur{background: #F39800;color: #fff;}
