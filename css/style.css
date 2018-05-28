@@ -2634,8 +2634,16 @@ button.disabled, btn.disabled, .btn[disabled], fieldset[disabled] .btn {
 .homePageIcon li{display:inline-block;position:relative;width:20%;font-size: 13px;text-align: center;color: #666;vertical-align: top;}
 .homePageIcon li:after{content: ' ';position: absolute;top: 22%;right: -35px;width: 70px;height: 16px;display: inline-block;background: url("../icon/icon_arrow.png") no-repeat;background-size: auto auto;background-position: center center;}
 .homePageIcon li:last-child:after{width: 0;height: 0;}
+.homePageIcon li:hover i{color: #F39800;}
+
 .homePageIcon li span{display: block;height: 60px;line-height:60px;text-align: center;margin-bottom: 8px;}
 .homePageIcon li span i{font-size: 60px;color: #B3B3B3;}
+.homePageIcon li span.copy{background: url("../icon/icon_copy.png")no-repeat;background-position: center center;background-size: auto auto;}
+.homePageIcon li span.ship{background: url("../icon/icon_ship.png")no-repeat;background-position: center center;background-size: auto auto;}
+.homePageIcon li span.plane{background: url("../icon/icon_plane.png")no-repeat;background-position: center center;background-size: auto auto;}
+.homePageIcon li:hover span.copy{background: url("../icon/icon_copy_hover.png")no-repeat;background-position: center center;background-size: auto auto;}
+.homePageIcon li:hover span.ship{background: url("../icon/icon_ship_hover.png")no-repeat;background-position: center center;background-size: auto auto;}
+.homePageIcon li:hover span.plane{background: url("../icon/icon_plane_hover.png")no-repeat;background-position: center center;background-size: auto auto;}
 .homePageIcon li>div{width: 90%;margin: 0 auto;}
 .homePageIcon li>div p{margin: 0;}
 
