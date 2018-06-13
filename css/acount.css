@@ -2,3 +2,17 @@
 
 body{background: #fff;}
 #footer{background: #f6f6f6;}
+
+/*注册页面差异化展示*/
+.register_header{text-align: center;}
+.register_header .head_logo{margin-right: 0;}
+.register_main .page-title{text-align: center;}
+.register_main .main.container{max-width: 1200px;width: auto;}
+.register_main #form-validate{border: none;width: 80%;max-width: 450px;}
+.register_main #form-validate input.input-text{box-sizing:border-box; -moz-box-sizing:border-box; -o-box-sizing:border-box; -webkit-box-sizing:border-box;width: 100%;max-width: 300px;}
+.register_main #form-validate .refresh-icon{display: inline-block;float: none;}
+.register_main .form-list .input-box{width: 100%;}
+
+@media (max-width: 414px) {
+    .register_main #form-validate .input-box .login-captcha-input{display: block;margin-bottom: 10px;}
+}
