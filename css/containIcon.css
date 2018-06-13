@@ -10,7 +10,7 @@
 
 
 /*图标*/
-.containItem .icon_foot{background: url("../icon/icon_sprite2.png") no-repeat;}
+.containItem .icon_foot{background: url("../icon/icon_sprite2.png") no-repeat;margin-bottom: 10px;}
 .containItem .icon_category{background-position: -8px -4px;}
 .containItem .icon_price{background-position: -105px -6px;}
 .containItem .icon_ship{background-position: -193px -6px;}
