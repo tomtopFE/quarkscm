@@ -1,15 +1,13 @@
 .top_nav_right .top_currency .currency_listhtml {font-size: 100%;}
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote {margin: 0;padding: 0;}
-body {color: #333;background-color: #f6f6f6;font: 1em/1.55 Verdana,Arial,Helvetica,sans-serif;font-weight:100;}
-a{color: #666;text-decoration: none;font-weight:100;}
+body {color: #000;background-color: #f6f6f6;font: 1em/1.55 Arial;font-weight:100;}
+a{color: #333;text-decoration: none;font-weight:100;}
 ol, ul {list-style: outside none none;}
 img{border:none;}
 h1, h2, h3, h4, h5, h6 {
-    color: #444;
-    font-family: Bitter,Myriad Pro,Verdana,serif;
+    font-family: Arial;
     font-weight: normal;
     line-height: 1;
-    /*padding-bottom: 23px;*/
 }
 h3 {
     font-size: 16px;

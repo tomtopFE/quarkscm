@@ -51,7 +51,7 @@
     #ccc;border-radius:0 0 5px 5px
 }
 a:hover {
-    color: #333
+    color: #000;
 }
 
 .menu_list>li{
@@ -203,7 +203,7 @@ a:hover {
 .containIcon>div p{color: #9F9C9F;line-height:16px;height:34px;overflow : hidden;}
 .lineBlock{display: inline-block;zoom: 1;font-size: 12px;letter-spacing: normal;word-spacing: normal;vertical-align: top;}
 .containItem{margin-bottom: 5px;}
-.containItem>span{color:#999;font-size:14px;font-weight: 600;}
+.containItem>span{font-size:14px;font-weight: 600;}
 .containItem>div{width:95px;height: 75px;margin: 0 auto;}
 
 

@@ -27,7 +27,7 @@ a {
 	blr: expression(this.onFocus=this.blur())
 }
 a:hover {
-	color: #333
+	color: #000;
 }
 
 .link,
