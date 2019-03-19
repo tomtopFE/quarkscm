@@ -30,7 +30,7 @@ var TT_NS = (function(NS, $) {
             // });
             this.fnGrouping();
             this.showTomtopSubmenu();
-            //this.notIndexNavShow();
+            this.notIndexNavShow();
         },
         activateSubmenu : function(row){
             var $row = $(row),
@@ -99,10 +99,12 @@ var TT_NS = (function(NS, $) {
             //类目分组
             var iMaximum = 20;
             var objs = $('.slide_menu').not('.m_nav_tomtop .slide_menu');
-            for (var i = 0; i < objs.length; i++) {
+            for (var j = 0; j < objs.length; j++) {
                 //根据不同类目设置每列放置的高度。
+                //quarkscm的分类， 少一类
+                var i = j-1;
                 if(i == 2){
-                   iMaximum = 25;
+                   iMaximum = 30;
                    console.log(iMaximum);
                 }else if(i == 9){
                    iMaximum = 25;

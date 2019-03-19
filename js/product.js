@@ -65,11 +65,15 @@ $(function () {
         _inputVal--;
         _inputVal = _inputVal < 2 ? 1 : _inputVal;
         $(this).next().val(_inputVal);
+
+        handleShippingMethod()
     })
     $('.sku-add').on('click', function () {
         var _inputVal = $(this).prev().val();
         _inputVal++;
         $(this).prev().val(_inputVal);
+
+        handleShippingMethod()
     })
 })
 $.fn.tab = function (option) {
@@ -296,6 +300,7 @@ $("#estimate-form").on("change", "#warehouse", function (a) {
             wid: r.val(),
             listing_id: $("#listing_id").val(),
             totalPrice: $("#totalPrice").val(),
+            qty: $("#qty_estimate").val(),
         }
     }).done(function (a) {
         if (a.status == 0) {
@@ -320,10 +325,16 @@ $("#estimate-form").on("change", "#warehouse", function (a) {
         // dialog.msg(a.msg)
     })
 })
-$("#estimate-form").on("change", "#shipping-country", function (a) {
+$("#estimate-form").on("change", "#shipping-country", function () {
+    handleShippingMethod()
+})
+$("#estimate-form").on("change", "#qty_estimate", function () {
+    handleShippingMethod()
+})
+function handleShippingMethod(){
     t.html('<option value=""></option>');
     $.ajax({
-        url: $.trim(s.attr("data-req-url")),
+        url: '/catalog/product/ajaxgetcountryshipping',
         type: "POST",
         dataType: "json",
         data: {
@@ -332,7 +343,7 @@ $("#estimate-form").on("change", "#shipping-country", function (a) {
             country: s.val(),
             listing_id: $("#listing_id").val(),
             totalPrice: $("#totalPrice").val(),
-
+            qty: $("#qty_estimate").val(),
         }
     }).done(function (a) {
         if (a.status == 0) {
@@ -345,10 +356,9 @@ $("#estimate-form").on("change", "#shipping-country", function (a) {
         } else {
             // $(".js_estimate").attr("disabled",true);
         }
-        // alert()
-        // dialog.msg(a.msg)
     })
-})
+}
+
 $(".estimate-item").on("change", "#platform_Fee", function (a) {
 
     $("#thrdPltfrm_fee").val($("#platform_Fee").val());

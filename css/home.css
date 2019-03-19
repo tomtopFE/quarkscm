@@ -1,0 +1,224 @@
+.overflowWrap{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.banner{width: 100%;max-width: 1200px;margin: 0 auto;}
+#newnav{
+    box-sizing:border-box;
+    width:1200px;
+    margin:10px auto;
+    height:40px;
+    position:relative
+}
+.nav_left{
+    box-sizing:border-box;
+    position:relative;
+    float:left;
+    width:19%;
+    background-color:#4d82b8;
+    height:40px;
+    line-height:40px
+}
+.nav_left>div{
+    width:100%;
+    position:relative;
+    text-align:center
+}
+.nav_left>div>p{
+    font-size:14px;
+    color:#fff;
+    width:90%
+}
+.nav_left>div>i{
+    position:absolute;
+    right:10px;
+    top:7px;
+    background-image:url(../images/iconTop.png);
+    background-position:-66px -5px;
+    background-repeat:no-repeat;
+    display:inline-block;
+    width:20px;
+    height:20px;
+    vertical-align:middle
+}
+.menu_list{
+    box-sizing:border-box;
+    z-index:9999;
+    position:absolute;
+    top:40px;
+    left:0;
+    width:100%;
+    min-height: 466px;
+    background-color:#fff;
+    border:1px solid
+    #ccc;border-radius:0 0 5px 5px
+}
+a:hover {
+    color: #333
+}
+
+.menu_list>li{
+    padding-left:10px
+}
+.menu_list>li>a{
+    box-sizing:border-box;
+    width:90%;
+    display:block;
+    height:29px;
+    font-size:12px;
+    position:relative;
+    line-height:29px
+}
+.menu_list>li>a>i{
+    position:absolute;
+    display:inline-block;
+    width:20px;
+    height:20px;
+    right:-7px;
+    top:5px;
+    background-image:url(../images/iconTop.png);
+    background-repeat:no-repeat;
+    background-position:-95px -6px;
+    vertical-align:middle
+}
+.menu_connet{
+    box-sizing:border-box;
+    display:none;
+    position:absolute;
+    z-index:10000;
+    left:100%;
+    top:-1px;
+    min-height:466px;
+    width:431%;
+    border:1px solid #ccc;
+    background-color:#fff;
+    border-top:0
+}
+.menu_connet>dl{
+    float:left;
+    width:33%;
+    padding-left:5px;
+    box-sizing:border-box
+}
+.menu_connet>dl>dt{
+    font-size:14px;
+    line-height:25px;
+    box-sizing:border-box
+}.menu_connet>dl>dd{
+     font-size:12px;
+     line-height:20px;
+     box-sizing:border-box
+ }
+.nav_right{
+    box-sizing:border-box;
+    float:left;
+    width:81%;
+    background-color:#fafafa;
+    border:1px solid #ccc;
+    height:40px;
+    line-height:39px
+}
+
+
+.nav_right>li{
+    color:#4d82b8;
+    float:left;
+    padding-left:5px;
+    border-right:1px solid #ccc;
+    box-sizing:border-box
+}
+#owl-fecshop .item img{
+    height:475px
+}
+.banner-slider{
+    width: 960px;
+    height:475px;
+    margin-left: 240px;
+    position: relative;
+    z-index:10;
+}
+.selected {
+    background-color: #ebebeb;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+
+/*首页hot product 产品盒子*/
+.m_homepage_prd ul li:nth-child(5n){margin-right: 0;}
+
+/*楼层产品*/
+.floor{width: 100%;font-size: 0;font-family: source_sans_prosemibold,Arial,sans-serif!important;}
+.floor>div{font-size: 13px;display: inline-block;vertical-align: top;}
+.floor_l{width: 232px;margin-right: 10px;background: #fff;}
+.floor_l ul{max-height: 550px;height: 550px;overflow: hidden;}
+.floor_l ul li{line-height: 36px;padding-left: 26px;}
+.floor_l ul li a{display:block;color: #666;}
+.floor_l ul li a:hover{color:#f39800;}
+.floor_l ul li:first-child{display:table-cell;width:216px;height: 80px;padding-left: 16px;vertical-align:middle;border-top:1px solid #f39800;box-shadow:2px 2px 12px 2px #ddd;}
+.floor_l ul li:first-child a{color:#f39800;position: relative;}
+.floor_l ul li:first-child span{display: inline-block;width: 80%;line-height:1.3;vertical-align:middle;font-size: 18px;font-weight: bold;}
+.floor_l ul li:first-child a i{font-size:22px;position: absolute;right: 25px;}
+.floor_l ul li:nth-child(2){margin-top: 26px;}
+.floor_r{width: 958px;}
+.m_floor_prd ul li{margin-bottom: 10px;}
+.m_floor_prd ul li:nth-child(4n){margin-right: 0;}
+
+/*首页 5个小图标*/
+.homePageIcon{width: 100%;font-size: 0;background: #fff;padding:28px 0;font-family: source_sans_prosemibold,Arial,sans-serif!important;}
+.homePageIcon li{display:inline-block;position:relative;width:20%;font-size: 13px;text-align: center;color: #666;vertical-align: top;}
+.homePageIcon li:after{content: ' ';position: absolute;top: 22%;right: -35px;width: 70px;height: 16px;display: inline-block;background: url("../icon/icon_arrow.png") no-repeat;background-size: auto auto;background-position: center center;}
+.homePageIcon li:last-child:after{width: 0;height: 0;}
+.homePageIcon li:hover i{color: #F39800;}
+
+.homePageIcon li span{display: block;height: 60px;line-height:60px;text-align: center;margin-bottom: 8px;}
+.homePageIcon li span i{font-size: 60px;color: #B3B3B3;}
+.homePageIcon li span.copy{background: url("../icon/icon_copy.png")no-repeat;background-position: center center;background-size: auto auto;}
+.homePageIcon li span.ship{background: url("../icon/icon_ship.png")no-repeat;background-position: center center;background-size: auto auto;}
+.homePageIcon li span.plane{background: url("../icon/icon_plane.png")no-repeat;background-position: center center;background-size: auto auto;}
+.homePageIcon li:hover span.copy{background: url("../icon/icon_copy_hover.png")no-repeat;background-position: center center;background-size: auto auto;}
+.homePageIcon li:hover span.ship{background: url("../icon/icon_ship_hover.png")no-repeat;background-position: center center;background-size: auto auto;}
+.homePageIcon li:hover span.plane{background: url("../icon/icon_plane_hover.png")no-repeat;background-position: center center;background-size: auto auto;}
+.homePageIcon li>div{width: 90%;margin: 0 auto;}
+.homePageIcon li>div p{margin: 0;}
+
+/*首页You May Like It*/
+.m_maylike ul li{margin-bottom: 10px;}
+.m_maylike ul li:nth-child(5n){margin-right: 0;}
+
+/*首页 品牌部分*/
+.m_brand{padding-top: 5px;background: #fff;border-top:2px solid #f39800;}
+.m_brand li{display: inline-block;font-size: 13px;vertical-align: middle;width: 148px;height: 106px;border: 1px solid transparent;line-height: 106px;}
+.m_brand li a{display: block;width: 100%;height: 100%;}
+.m_brand li a img{display: block;margin: auto;position: relative;top: 50%;transform: translateY(-50%);}
+.m_brand li:hover{border-color: #efefef;box-shadow: 1px 2px 3px #ddd;}
+
+/*楼层*/
+.nav_content{padding: 0 1px;background: #fff;}
+.nav_content li{text-align:center;font-size:24px;border-left: 1.4px solid #ccc;border-right: 2px solid #ccc;border-top: 1px solid #ccc;}
+.nav_content li.floor_nav_cur{background: #F39800;color: #fff;}
+
+
+/*******************新增样式******************************/
+.containIcon{min-width: 1200px;font-size: 0;/*margin-top: 42px; */padding: 10px 0;}
+.containIcon>div{width: 190px;padding:14px 4px 0;text-align:center;word-wrap: break-word;white-space: normal;}
+
+.containIcon>div p{color: #9F9C9F;line-height:16px;height:34px;overflow : hidden;}
+.lineBlock{display: inline-block;zoom: 1;font-size: 12px;letter-spacing: normal;word-spacing: normal;vertical-align: top;}
+.containItem{margin-bottom: 5px;}
+.containItem>span{color:#999;font-size:14px;font-weight: 600;}
+.containItem>div{width:95px;height: 75px;margin: 0 auto;}
+
+
+/*图标*/
+.containItem .icon_foot{background: url("../icon/icon_sprite2.png") no-repeat;margin-bottom: 10px;}
+.containItem .icon_category{background-position: -8px -4px;}
+.containItem .icon_price{background-position: -105px -6px;}
+.containItem .icon_ship{background-position: -193px -6px;}
+.containItem .icon_warehouse{background-position: -387px -5px;}
+.containItem .icon_profit{background-position: -285px -4px;}
+.containItem .icon_platform{background-position: -490px -6px;}
+.containIcon .lineBlock:hover .icon_category{background-position: -8px -82px;}
+.containIcon .lineBlock:hover .icon_price{background-position: -105px -84px;}
+.containIcon .lineBlock:hover .icon_ship{background-position: -193px -84px;}
+.containIcon .lineBlock:hover .icon_warehouse{background-position: -387px -83px;}
+.containIcon .lineBlock:hover .icon_profit{background-position: -285px -82px;}
+.containIcon .lineBlock:hover .icon_platform{background-position: -490px -84px;}
+/*******************新增样式******************************/
