@@ -875,6 +875,7 @@ button.dataUp i {
 .block .block-title a { text-decoration:none !important; }
 .block .block-subtitle { font-size:13px; font-weight:bold; }
 .block .block-content { padding:5px 0; }
+.block .block-content h3{ padding:5px 0;font-size:14px;font-weight:bold; border-bottom:1px solid #ccc; }
 .block .block-content li.item { padding:5px 0; }
 .block .btn-remove,
 .block .btn-edit { float:right;}
@@ -886,7 +887,7 @@ button.dataUp i {
 .block li.even { background-color:#f6f6f6; }
 
 
-.sidebar .block-account li {background: rgba(0, 0, 0, 0.05);font-size: 12px;margin: 3px 0;}
+.sidebar .block-account li {font-size: 12px;margin: 3px 0;}
 
 
 
@@ -941,8 +942,8 @@ button.dataUp i {
 }
 /*个人中心左侧导航*/
 .sidebar .block-account li:hover a{color: #f90;}
-.sidebar .block-account li a{display: block;padding: 10px 0 10px 16px;}
-.sidebar .block-account li.current a{background:#bebebe;color: #fff;}
+.sidebar .block-account li a{display: block;padding: 4px 0 4px 10px;}
+.sidebar .block-account li.current a{color: #f90;}
 .page-title {
     border: medium none;
     margin: 0 0 3px;
@@ -1000,11 +1001,6 @@ table {
     background: #f7f7f7 none repeat scroll 0 0;
 }
 
-
-
-
-
-
 .cpointer {
     background: #ccc;
     border: 0 none;
@@ -1015,7 +1011,6 @@ table {
     border-radius: 4px;
     padding: 3px 6px 6px 6px;
 }
-
 
 .addnew.cpointer {
     background: #f90;
