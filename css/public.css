@@ -483,7 +483,7 @@ del.my_shop_price{color: #999;font-size: 13px;}
 .clear{clear:both;zoom: 1;}
 #footer .container {margin: auto;width: 1170px;}
 .footer-bottom .container {padding: 12px;text-align: center;}
-.newsletter-container input.input-text {float: left;}
+.newsletter-container input.input-text {float: left;display: inline-block !important;width: auto !important;vertical-align:middle;}
 input.input-text {border: 1px solid #ccc;border-radius: 2px;color: #777;height: 33px;padding: 0 10px;}
 .newsletter-button{background-color: #000;border: 1px solid #000;color: #fff;cursor: pointer;float: left;height: 34px;min-width: 52px;overflow: visible;padding: 0 5px;white-space: nowrap;}
 .newsletter-button:hover{background: #000;filter:alpha(opacity=80);-moz-opacity:0.8;opacity:0.8;}
@@ -491,7 +491,9 @@ input.input-text {border: 1px solid #ccc;border-radius: 2px;color: #777;height: 
 #footer ul li{height:22px;}
 .top_currency   .currency_list   ul li{cursor:pointer;}
 
-.two-columns-left .col-main{width:959px;float:right;}
+.two-columns-left .col-main{
+    width:959px;float:right;padding:0 50px 50px 0;box-sizing:border-box;
+}
 .two-columns-left .col-left {width:200px;float:left;margin-left: 24px;}
 .two-columns-left .sidebar{margin-left: 0;}
 .col-main h1{font-size:15px;font-weight:100;}
