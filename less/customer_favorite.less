@@ -33,19 +33,23 @@
     .shipping-right {
         width: 40px;
         height: 115px;
-        float: left
+        float: left;
+        text-align:center;
     }
-
     .shipping-right > span {
         display: inline-block;
         font-size: 28px;
         font-weight: bold;
         width: 100%;
         color: #ccc;
-        margin-top:24px;
+        margin-top:35px;
         text-align: center;
+        background:url(../images/arrow_icon.png);
+        width:16px;
+        height:22px;
+        overflow: hidden;
+        text-indent:9999em;
     }
-
     .shipping-checkbox {
         display: inline-block;
         position: absolute;
@@ -261,6 +265,7 @@
        position:fixed;
        bottom:0;
        left:0;
+       z-index:100;
        .ordercost-shipping{
           height:auto;padding:10px 0;
           .shipping-left,.shipping-right{height:auto}
@@ -352,7 +357,7 @@
             -webkit-box-shadow: inset 0px 3px 3px #f5f5f5;
             box-shadow: inset 0px 3px 3px #f5f5f5;
         }
-        #tool_select{width:100%}
+        #tool_select{width:100%;margin-bottom:20px}
         #tool_more{
             background:#313131;
             color:#fff;
@@ -373,7 +378,7 @@
         background:#fcf8e3;
         padding:12px;
         line-height:20px;
-        margin:12px 0 20px;
+        margin:0 0 20px;
     }
     /*弹窗*/
     .prompt_class{ 

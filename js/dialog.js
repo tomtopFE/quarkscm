@@ -202,12 +202,13 @@ var TT_NS = (function(NS, $){
             var sBtnTextA = _parameter.btnTextA || 'cancel';
             var sBtnText = _parameter.btnText || 'Submit';
             var isShake = _parameter.shake || false;
+            var sid = _parameter.id || '';
             var sNewElems = $('<div class="bm_dialog prompt dialog_show '+ sAddClass +'">' +
                                     '<i></i>' +
                                     '<div class="dialog_c">' +
                                         '<div class="dialog_head">' + sTitle + '</div>' +
                                         '<div class="dialog_body">' +
-                                             '<textarea placeholder="'+ sContent +'"></textarea>' +
+                                             '<textarea id='+ sid +' placeholder="'+ sContent +'"></textarea>' +
                                         '</div>' +
                                         '<div class="dialog_foot">' +
                                             '<input type="button" value="' + sBtnTextA + '" class="bm_btn_A minor cancel false" />' +
