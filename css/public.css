@@ -492,7 +492,7 @@ input.input-text {border: 1px solid #ccc;border-radius: 2px;color: #777;height: 
 .top_currency   .currency_list   ul li{cursor:pointer;}
 
 .two-columns-left .col-main{
-    width:959px;float:right;padding:0 50px 50px 0;box-sizing:border-box;
+    width:959px;float:right;
 }
 .two-columns-left .col-left {width:200px;float:left;margin-left: 24px;}
 .two-columns-left .sidebar{margin-left: 0;}
