@@ -2362,26 +2362,26 @@
                         <div class="dialog_head">Brand Apply</div>
                         <div class="dialog_body">
                              <label for="id_select"></label>
-                             <select id="id_select" class="selectpicker bla bla bli" data-live-search="true" multiple data-max-options="5">
-                            <option>cow</option>
-                            <option>bull</option>
-                            <option>ASD</option>
-                            <option selected>Bla</option>
-                            <option>Ble</option>
-                            <option>aaa</option>
-                            <option>bbb</option>
-                            <option>ccc</option>
-                            <option>ddd</option>
-                            <option>eee</option>
-                            <option>fff</option>
-                            <option>ggg</option>
-                            <option>hhh</option>
-                            <option>iii</option>
-                            <option>jjj</option>
-                            <option>kkk</option>
-                            <option>lll</option>
-                            <option>mmm</option>
-                            <option>nnn</option>
+                             <select id="id_select" class="selectpicker bla bla bli" data-live-search="true" multiple data-max-options="5" onchange="selectOnchang(this)">
+                            <option value="1">cow</option>
+                            <option value="2">bull</option>
+                            <option value="3">ASD</option>
+                            <option selected value="4">blan</option>
+                            <option value="5">Ble</option>
+                            <option value="6">aaa</option>
+                            <option value="7">bbb</option>
+                            <option value="8">ccc</option>
+                            <option value="9">ddd</option>
+                            <option value="10">eee</option>
+                            <option value="11">fff</option>
+                            <option value="12">ggg</option>
+                            <option value="13">hhh</option>
+                            <option value="14">iii</option>
+                            <option value="15">jjj</option>
+                            <option value="16">kkk</option>
+                            <option value="17">lll</option>
+                            <option value="18">mmm</option>
+                            <option value="19">nnn</option>
                             </optgroup>
                             </select>  
 
@@ -2571,7 +2571,24 @@
                 'selectedText': 'cat',
                 'maxOptions':3
             });
+
+
         })
+        function selectOnchang(obj){
+            var val = "", staffs = [];
+            //循环的取出插件选择的元素(通过是否添加了selected类名判断)
+            setTimeout(function(){
+                for (var i = 0; i < $("li.selected").length; i++) {
+                    var optionIndex = $("li.selected").eq(i).index()
+                    var value = obj.options[optionIndex].value;
+                    if (value != '') {
+                        staffs.push(value);
+                    }
+                }
+                console.log(staffs)
+                $("#brand_apply_ids").val(JSON.stringify(staffs)); 
+            },100)
+        }
     </script>
     <!-- Google Tag Manager -->
     <script>
