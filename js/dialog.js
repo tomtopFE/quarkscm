@@ -271,7 +271,9 @@ var TT_NS = (function(NS, $){
         globalCloseDialog: function () {
             //点击对话框的假黑底
             $(document).on('click','.bm_dialog',function () {
-                NS['dialog'].closeDialog($(this));
+                if($(this).attr('data-click-close')!=='off'){
+                   NS['dialog'].closeDialog($(this));
+                }
             });
             //点击对话框的关闭按钮
             $(document).on('click','.close_dialog',function () {

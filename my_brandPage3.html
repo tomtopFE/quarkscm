@@ -2357,7 +2357,7 @@
                     </div>
                 </div>
                <!----品牌选择弹框---->
-               <div class="bm_dialog brand_apply_dialog"><i></i>
+               <div class="bm_dialog brand_apply_dialog" data-click-close='off'><i></i>
                     <div class="dialog_c">
                         <div class="dialog_head">Brand Apply</div>
                         <div class="dialog_body">
@@ -2562,7 +2562,7 @@
     <script src="js/header_footer.min.js?v=25"></script>
     <script>
         $(function(){
-            $('.brand_apply ').click(function () {
+            $('.brand_apply').click(function () {
                 $(this).blur();//消除按钮元素在点击回车键的时候若焦点还在会继续执行点击事件的问题。
                 TT_NS['dialog'].dialogBg(true, {css:{'z-index':999}});
                 $('.brand_apply_dialog').addClass('dialog_show');
@@ -2571,13 +2571,26 @@
                 'selectedText': 'cat',
                 'maxOptions':3
             });
-
-
+            $('.brand_apply_dialog .dialog_c').click(function(){
+                if($('.bootstrap-select').hasClass('open')){
+                    $('.bootstrap-select').removeClass('open')
+                }
+            })
+            $(document).on('click','.bm_dialog.brand_apply_dialog',function () {
+                    if($('.bootstrap-select').hasClass('open')){
+                        $('.bootstrap-select').removeClass('open')
+                    }
+                }
+            );
         })
         function selectOnchang(obj){
             var val = "", staffs = [];
+            if($('.bootstrap-select .dropdown-header').length>0){
+                $('.bootstrap-select .dropdown-header').remove();
+            }
             //循环的取出插件选择的元素(通过是否添加了selected类名判断)
             setTimeout(function(){
+
                 for (var i = 0; i < $("li.selected").length; i++) {
                     var optionIndex = $("li.selected").eq(i).index()
                     var value = obj.options[optionIndex].value;
