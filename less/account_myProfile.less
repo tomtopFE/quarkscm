@@ -5351,3 +5351,30 @@
 .pass_status{color:#00bb00;border:1px solid #00bb00;display:inline-block;padding:2px 5px;border-radius:4px;margin:3px 5px 3px 0;max-width:211px;}
 .normal_status{color:#666666;border:1px solid #cdcdcd;display:inline-block;padding:2px 5px;border-radius:4px;margin:3px 5px 3px 0;max-width:211px;}
 .reject_status{color:#ff0000;border:1px solid #ff0000;display:inline-block;padding:2px 5px;border-radius:4px;margin:3px 5px 3px 0;max-width:211px;}
+#form-validate .select2-container{width:284px !important;}
+#form-validate select{width:284px;border: 1px solid #ccc;}
+#form-validate .select2-container--default .select2-selection--single {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    height:35px;line-height:35px;
+    border-radius:2px
+    /* border-radius: 4px; */
+}
+#form-validate .select2-container--default .select2-selection--single .select2-selection__arrow b{margin-top:1px;}
+.form_wrap{
+	.left_box{
+		width:428px;
+		.dropdown-menu{z-index:3000 !important;max-height:300px !important;}
+		 .bootstrap-select{
+	    	*{box-sizing:border-box;}
+	    }
+	    .btn.dropdown-toggle{border-radius:2px;}
+	    .bootstrap-select:not([class*="span"]):not([class*="col-"]):not([class*="form-control"]){width:284px}
+	}
+	.right_box{
+		width:450px;
+		padding-top:24px;
+		li{line-height:25px;font-size:14px;padding-bottom:10px;color:#666;}
+	}
+
+}
