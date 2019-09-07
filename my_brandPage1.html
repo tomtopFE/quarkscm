@@ -2612,9 +2612,9 @@
                             <option value="5">Ble</option>
                             <option value="6">aaa</option>
                             <option value="7">bbb</option>
-                            <option value="8">ccc</option>
-                            <option value="9">ddd</option>
-                            <option value="10">eee</option>
+                            <option selected value="4">ccc</option>
+                            <option selected value="4">ddd</option>
+                            <option selected value="4">eee</option>
                             <option value="11">fff</option>
                             <option value="12">ggg</option>
                             <option value="13">hhh</option>
@@ -2870,10 +2870,6 @@
             var $element = $(this)
             $element.select2({ dropdownAutoWidth: true });
         })
-        $('.selectpicker').selectpicker({
-            'selectedText': 'cat',
-            'maxOptions':3
-        });
         $('.brand_apply_dialog .dialog_c').click(function(){
             if($('.bootstrap-select').hasClass('open')){
                 $('.bootstrap-select').removeClass('open')

@@ -2960,8 +2960,45 @@
                                     <div id="message">
                                     </div>
                                     <input type="hidden" value="0" id="execl_header" />
+
                                 </form>
                                 <div class="clear"></div>
+                            </div>
+                            <div class="bm_dialog prompt_class shakeX tips_dialog"><i></i>
+                                <div class="dialog_c">
+                                    <div class="dialog_head">congratualations!</div>
+                                    <div class="dialog_body">
+                                         <P class="inline-group">Product data has been downloaded</P>
+                                         <div class="group inline-group" style="margin-top: 5px;">
+                                         <span id="result"><a style="color:#35a2fe;text-decoration: underline;" href="/download/favorite/quarkscm-lazada_f-29691567839181.csv">Click downloads</a></span>
+                                         </div>
+                                         <div id="message">
+                                              
+                                         </div>
+                                         <input type="hidden" value="0" id="execl_header" />
+                                    </div>
+                                    <i class="icon_cross close close_dialog"></i>
+                                </div>
+                            </div>
+                            <div class="bm_dialog prompt_class shakeX tips_dialog"><i></i>
+                                <div class="dialog_c">
+                                    <div class="dialog_head">Attention!</div>
+                                    <div class="dialog_body">
+                                         <P class="inline-group">Parts of SKU Product data has been downloaded</P>
+                                         <div class="group inline-group" style="margin-top: 5px;">
+                                         <span id="result"><a style="color:#35a2fe;text-decoration: underline;" href="/download/favorite/quarkscm-lazada_f-29691567839181.csv">Click downloads</a></span>
+                                         </div>
+                                         <div id="message">
+                                              <p>Resons for Rrror</p>
+                                              <ol>
+                                                  <li>Sku not published 160061US</li>
+                                                  <li>Sku not Authorized 160061US</li>
+                                              </ol>
+                                         </div>
+                                         <input type="hidden" value="0" id="execl_header" />
+                                    </div>
+                                    <i class="icon_cross close close_dialog"></i>
+                                </div>
                             </div>
                             <div class="pageToolbar">
                                 <div style="float: right;">
@@ -4117,6 +4154,8 @@
         var product_array = new Array();
         var type = 'sku';
         $(".download_select").click(function() {
+            TT_NS['dialog'].dialogBg(true, {css:{'z-index':999}});
+            $('.tips_dialog').addClass('dialog_show');
             var warehouse_id = $("#warehouse").select2().val() * 1;
             if (!warehouse_id) {
                 alert('Warehouse must select');
