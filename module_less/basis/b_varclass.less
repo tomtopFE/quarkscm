@@ -14,99 +14,191 @@
 
 ********** 变量类calss **********/
 //整站a链接颜色
-@a:#333;//a标签默认颜色
-@ac:#4d82b8;//a标签hover颜色
-@cA01:#f60;
-.bgf(){background:#fff;}
+@a: #333; //a标签默认颜色
+@ac: #4d82b8; //a标签hover颜色
+@cA01: #f60;
+@version: '?20190727';
+
+.bgf() {
+  background: #fff;
+}
+
 //浮动
-.fl(){float:left;}
-.fr(){float:right;}
-@version:'?20171122';
+.fl() {
+  float: left;
+}
+
+.fr() {
+  float: right;
+}
+
+@version: '?20171122';
+
 //边框
-.border(@px:1px; @style:solid; @color:#ccc;){
-  border:@px @style @color;
+.border(@px: 1px; @style: solid; @color: #ccc; ) {
+  border: @px @style @color;
 }
-.border_t(@px:1px; @style:solid; @color:#ccc;){
-  border-top:@px @style @color;
+
+.border_t(@px: 1px; @style: solid; @color: #ccc; ) {
+  border-top: @px @style @color;
 }
-.border_r(@px:1px; @style:solid; @color:#ccc;){
-  border-right:@px @style @color;
+
+.border_r(@px: 1px; @style: solid; @color: #ccc; ) {
+  border-right: @px @style @color;
 }
-.border_b(@px:1px; @style:solid; @color:#ccc;){
-  border-bottom:@px @style @color;
+
+.border_b(@px: 1px; @style: solid; @color: #ccc; ) {
+  border-bottom: @px @style @color;
 }
-.border_l(@px:1px; @style:solid; @color:#ccc;){
-  border-left:@px @style @color;
+
+.border_l(@px: 1px; @style: solid; @color: #ccc; ) {
+  border-left: @px @style @color;
 }
 
 //圆角
-.borderRa(@px:4px;){
-  border-radius:@px;
+.borderRa(@px: 4px; ) {
+  border-radius: @px;
 }
-.borderRa_lt(@px:4px;){
-  border-top-left-radius:@px;
+
+.borderRa_lt(@px: 4px; ) {
+  border-top-left-radius: @px;
 }
-.borderRa_rt(@px:4px;){
-  border-top-right-radius:@px;
+
+.borderRa_rt(@px: 4px; ) {
+  border-top-right-radius: @px;
 }
-.borderRa_lb(@px:4px;){
-  border-bottom-left-radius:@px;
+
+.borderRa_lb(@px: 4px; ) {
+  border-bottom-left-radius: @px;
 }
-.borderRa_rb(@px:4px;){
-  border-bottom-right-radius:@px;
+
+.borderRa_rb(@px: 4px; ) {
+  border-bottom-right-radius: @px;
 }
 
 //水平并排相关
-.lineBlockBox(@align:left){display:table; text-align:@align; width:100%; font-size:0; letter-spacing:-3px;  word-spacing:-3px;}
-.lineBlock(@align:middle){display:inline-block; *display:inline; *zoom:1; vertical-align:@align; font-size:12px; letter-spacing:0; word-spacing:0;}
-.lineBlockBoxs(@align:left,@salign:middle){display:table; width:100%;  text-align:@align; font-size:0; letter-spacing:-3px;  word-spacing:-3px;
-  >*{.lineBlock(@salign);}
+.lineBlockBox(@align: left) {
+  display: table;
+  text-align: @align;
+  width: 100%;
+  font-size: 0;
+  letter-spacing: -3px;
+  word-spacing: -3px;
+}
+
+.lineBlock(@align: middle) {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  vertical-align: @align;
+  font-size: 12px;
+  letter-spacing: 0;
+  word-spacing: 0;
+}
+
+.lineBlockBoxs(@align: left, @salign: middle) {
+  display: table;
+  width: 100%;
+  text-align: @align;
+  font-size: 0;
+  letter-spacing: -3px;
+  word-spacing: -3px;
+
+  >* {
+    .lineBlock(@salign);
+  }
 }
 
 
 
 //处理超出字符
-.strLen(){text-overflow:ellipsis;white-space:nowrap;overflow:hidden;}
+.strLen() {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
 //文本强制换行，wxl
-.textbr{white-space:normal;word-wrap:break-word;}
+.textbr {
+  white-space: normal;
+  word-wrap: break-word;
+}
+
 //文本强制换行，wxl
-.linethrough{text-decoration:line-through;}
+.linethrough {
+  text-decoration: line-through;
+}
+
 //
-.rel{position:relative;}
-.abs{position:absolute;}
-.ovh{overflow:hidden;}
+.rel {
+  position: relative;
+}
+
+.abs {
+  position: absolute;
+}
+
+.ovh {
+  overflow: hidden;
+}
+
 //动画时间
-.animate(@time:0.5s;){transition:all @time; -moz-transition:all @time; -o-transition:all @time; -ms-transition:all @time; -webkit-transition:all @time;}
+.animate(@time: 0.5s; ) {
+  transition: all @time;
+  -moz-transition: all @time;
+  -o-transition: all @time;
+  -ms-transition: all @time;
+  -webkit-transition: all @time;
+}
+
 /******************** 动画X Y ********************************/
-.ani_translate(@x:0px,@y:0px){transform:translate(@x,@y); -moz-transform:translate(@x,@y);
-  -ms-transform:translate(@x,@y); -o-transform:translate(@x,@y); -webkit-transform:translate(@x,@y);}
-.ani_3D(@z:1;@x:0){-webkit-transform: scaleZ(@z) rotateX(@x);
+.ani_translate(@x: 0px, @y: 0px) {
+  transform: translate(@x, @y);
+  -moz-transform: translate(@x, @y);
+  -ms-transform: translate(@x, @y);
+  -o-transform: translate(@x, @y);
+  -webkit-transform: translate(@x, @y);
+}
+
+.ani_3D(@z: 1; @x: 0) {
+  -webkit-transform: scaleZ(@z) rotateX(@x);
   -moz-transform: scaleZ(@z) rotateX(@x);
   -ms-transform: scaleZ(@z) rotateX(@x);
   -o-transform: scaleZ(@z) rotateX(@x);
-  transform: scaleZ(@z) rotateX(@x);}
+  transform: scaleZ(@z) rotateX(@x);
+}
 
 //旋转相关
-.rotate(@rotate:180deg){transform:rotate(@rotate); -moz-transform:rotate(@rotate); -ms-transform:rotate(@rotate); -o-transform:rotate(@rotate); -webkit-transform:rotate(@rotate);}
+.rotate(@rotate: 180deg) {
+  transform: rotate(@rotate);
+  -moz-transform: rotate(@rotate);
+  -ms-transform: rotate(@rotate);
+  -o-transform: rotate(@rotate);
+  -webkit-transform: rotate(@rotate);
+}
 
 /*整站通用shadow*/
-.shadow(){box-shadow:0 2px 4px #ccc;}
+.shadow() {
+  box-shadow: 0 2px 4px #ccc;
+}
 
 /*整站通用变化的opacity*/
-.opacity(@p:100){
-    filter:alpha(opacity=@p);   
-    -moz-opacity:@p/100;   
-    opacity:@p/100;   
+.opacity(@p: 100) {
+  filter: alpha(opacity=@p);
+  -moz-opacity: @p/100;
+  opacity: @p/100;
 }
+
 /*按钮初始的透明度*/
-.btnOpacity(@p:100){
-    filter:alpha(opacity=@p);   
-    -moz-opacity:@p/100;   
-    opacity:@p/100;       
+.btnOpacity(@p: 100) {
+  filter: alpha(opacity=@p);
+  -moz-opacity: @p/100;
+  opacity: @p/100;
 }
+
 /*按钮hover的时候改变透明度*/
-.btnHoverOpacity(@p:80){
-    filter:alpha(opacity=@p);   
-    -moz-opacity:@p/100;   
-    opacity:@p/100;       
+.btnHoverOpacity(@p: 80) {
+  filter: alpha(opacity=@p);
+  -moz-opacity: @p/100;
+  opacity: @p/100;
 }

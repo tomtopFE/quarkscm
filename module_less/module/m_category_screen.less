@@ -1,0 +1,238 @@
+/********** 类目结果排序 **********
+
+作    者:wxl
+
+时    间:2017-07-28
+
+********** 类目结果排序 **********/
+
+//列表排序条件
+//新加图标
+@version: '?20190727';
+
+.border(@px: 1px; @style: solid; @color: #ddd; ) {
+    border: @px @style @color;
+}
+
+.new_icon(@L, @T) {
+    background-image:url('../images/newicon.png@{version}');
+    background-repeat: repeat-x;
+    background-position: @arguments;
+    display: inline-block;
+    vertical-align: middle;
+    *display: inline;
+    *zoom: 1;
+}
+
+.m_category_screen {
+    position: relative;
+    padding: 0 15px;
+    margin-top: 10px;
+    background-color: #f2f2f2;
+    font-size: 12px;
+    margin: 6px 10px 6px 0;
+
+    &.fixed {
+        position: fixed;
+        top: 0;
+        z-index: 9999;
+        width: 919px;
+        margin-top: 0
+    }
+
+    .sort_wrap {
+        line-height: 46px;
+        display: inline-block;
+
+        label {
+            font-weight: bold;
+            display: inline-block;
+            cursor: default;
+        }
+
+        a {
+            padding-left: 10px;
+            display: inline-block;
+            text-transform: capitalize;
+
+            &.active {
+                color: #ff9900;
+                font-weight: 450;
+
+                i {
+                    .new_icon(-21px, -15px);
+                }
+            }
+
+            &:hover {
+                color: #ff9900;
+
+                i {
+                    .new_icon(-21px, -15px);
+                }
+            }
+
+            i {
+                margin: 0 0px 1px 3px;
+                position: relative;
+                .new_icon(-21px, -5px);
+                width: 8px;
+                height: 4px;
+
+                &:before {
+                    display: none;
+                }
+            }
+
+            .tow_icon {
+                display: inline-block;
+                vertical-align: middle;
+                position: relative;
+                top: -1px;
+                left: -2px;
+
+                i {
+                    display: block !important;
+                }
+
+                .icon_arr_top {
+                    .new_icon(-21px, 0px);
+                }
+
+                .icon_arr_bottom {
+                    .new_icon(-21px, -5px);
+
+                }
+            }
+
+            .icon_arr_top.active {
+                .new_icon(-21px, -10px);
+            }
+
+            .icon_arr_bottom.active {
+                .new_icon(-21px, -15px);
+            }
+
+        }
+
+    }
+
+    .tb_rg {
+        float: right;
+        margin-top: 10px;
+    }
+
+    .tb_rg span,
+    .tb_rg a {
+        display: inline-block;
+        padding: 0 7px;
+        height: 24px;
+        line-height: 24px;
+        text-align: center;
+        border: 1px solid #ddd;
+        background: #fff;
+    }
+
+    .tb_le b {
+        font-size: 0.8em
+    }
+
+    .tb_rg .current {
+        background: #f39800;
+        color: #fff;
+        border: 1px solid #f39800;
+    }
+
+    .category_select {
+        top: 12px;
+        position: absolute;
+        right: 20px;
+        display: none;
+
+        .select_show {
+            a {
+                background: none;
+                padding: 0;
+                border: 0;
+                cursor: pointer;
+
+                &:hover {
+                    color: #ff9900;
+                }
+
+                i {
+                    color: #666;
+                    display: inline-block;
+                    width: 18px;
+                    height: 17px;
+                    vertical-align: middle;
+                }
+
+                &.show_list {
+                    margin-right: 10px
+                }
+
+                i.icon_grid {
+                    font-size: 26px;
+                }
+
+                i.icon_list {
+                    font-size: 26px;
+                }
+            }
+
+            .show_list.active {
+                i {
+                    color: #ff9900;
+                }
+            }
+
+            .show_block.active {
+                i {
+                    color: #ff9900;
+                }
+            }
+        }
+    }
+
+    .ship_from,
+    .secondGoods_search_wrap {
+        margin-left: 70px
+    }
+
+    .ship_from {
+        select {
+            height: 26px;
+            line-height: 24px;
+            .border(@color: #ccc);
+            margin-bottom: 2px
+        }
+    }
+
+    .secondGoods_search_wrap {
+        margin-bottom: 2px;
+
+        input {
+            height: 26px;
+            line-height: 24px;
+            .border(@color: #ccc);
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .icon_search {
+            .border(@color: #ccc);
+            font-size: 20px;
+            width: 36px;
+            height: 26px;
+            border-left: none;
+            display: inline-block;
+            vertical-align: middle;
+            text-align: center;
+            line-height: 24px;
+            position: relative;
+            left: -5px;
+            cursor: pointer;
+        }
+    }
+}
