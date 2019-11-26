@@ -2048,7 +2048,17 @@
                                     <textarea name="remark_text"
                                         placeholder="Write anything you like to require more on your placed order, such as the shipping and other order related requirements."></textarea>
                                 </div>
-
+                                <div>
+                                    <div class="hd">
+                                     <p class="onestepcheckout-numbers onestepcheckout-numbers-3">面单信息</p>
+                                    </div>
+                                    <div class="bd">
+                                           <form action="UploadFile.ashx" method="post" enctype="multipart/form-data">
+                                                 <input type="file" name="fileUpload" />
+                                                 <input type="submit" value="上传文件" />
+                                           </form>
+                                    </div>
+                                </div>
                                 <div class="onestepcheckout-coupons">
                                     <div style="display: none;" id="coupon-notice"></div>
                                     <div class="op_block_title">Coupon codes (optional)</div>
