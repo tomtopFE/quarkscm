@@ -140,26 +140,10 @@ var TT_NS = (function(NS, $){
                             NS.styleUpload.showPrvImg('/', prid);
                         } else {
                             //这里处理上传逻辑
-                                var upImage = new Image();
-                                 upImage.src = src;
-                                 upImage.onload = function () {
-                                      var w = upImage.width;
-                                      var H = upImage.height;
-                                      console.log(w +":"+ H);
-                                      if(w >= 0 && H >= 0 ){
-                                          NS.styleUpload.showPrvImg(src, prid);
-                                          $("#show_error").hide().html("");
-                                          if($("#show_error").css('display')=='none'){
-                                             NS.styleUpload.upload(src);  
-                                          }
-                                      }else{
-                                         NS.styleUpload.showPrvImg(' ', prid);
-                                         $("#show_error").show().html("not bigger than 2M");
-                                         $(".uploading_tips").hide();
-                                         return false;
-                                      }
-                                }
-                                                     
+                            $("#show_error").hide().html("");
+                            if($("#show_error").css('display')=='none'){
+                                 NS.styleUpload.upload(src);  
+                            }
                         }
                     }
                     fr.readAsDataURL(f);
@@ -176,15 +160,14 @@ var TT_NS = (function(NS, $){
         upload:function(data){
             // dataURL 的格式为 “data:image/png;base64,****”,
             // 逗号之前都是一些说明性的文字，我们只需要逗号之后的就行了
-
             console.log(data);
-            data=data.split(',')[1];
-            data=window.atob(data);
+            data= data.split(',')[1];
+            data= window.atob(data);
             var ia = new Uint8Array(data.length);
             for (var i = 0; i < data.length; i++) {
                 ia[i] = data.charCodeAt(i);
             };
-            var blob = new Blob([ia], {type:"image/png"});
+            var blob = new Blob([ia], {type:'application/pdf'});
             var fd = new FormData();
             fd.append("upload", 1);
             fd.append('file',blob);
