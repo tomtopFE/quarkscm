@@ -35,19 +35,21 @@ var TT_NS = (function(NS, $){
             $(".delete_photo").click(function(){
                 NS.config.isUpoad = false;
                 $(this).parents(".preview_pic").find("img").attr('src','');
-                $(this).parents(".upload").find(".success_info").hide();
-                $(this).parents(".upload").find(".upload_btn").show();
-                $(this).parents(".upload").find(".preview_wrap").hide();
-                $(".success_info").hide();
-                $("#show_error").hide();
+                var op = $(this).parents(".upload");
+                op.find(".success_info").hide();
+                op.find(".upload_btn").show();
+                op.find(".preview_wrap").hide();
+                op.find(".success_info").hide();
+                op.find(".show_error").hide();
                 _this.clear();
             })
-            $('#filepath').change(function(){
-                var id = $(this).attr('id');
+            $('.filepath').change(function(){
+                var id = $(this).attr('class');
+                var dataId = $(this).attr('data-id')
                 $(this).parents(".upload").find(".upload_btn").hide();
                 $(this).parents(".upload").find(".preview_wrap").show();
                 $(this).parents(".upload").find(".uploading_tips").show();
-                NS.styleUpload.validateImage(this, 'prv' + id);
+                NS.styleUpload.validateImage(this, 'prv' + id,dataId,$(this));
             });
             //提交
             $(".m_upload_c").on('click',".next",function(){
@@ -120,10 +122,13 @@ var TT_NS = (function(NS, $){
                     return false;
             }
         },
-        validateImage: function (a, prid) {//预览图片
+        validateImage: function (a, prid,dataId,$this) {//预览图片
             var file = a;
             var tip = "format:pdf!"; // 设定提示信息
-            var prvbox = $('#' +　prid);
+            var prvbox = $('.' +　prid);
+            var op = $this.parents('.upload')
+            var err_info_dom = op.find(".error_info");
+            var isloading_dom = op.find(".uploading_tips");
             prvbox.empty();
             if (window.FileReader) { // html5方案
                 for (var i=0, f; f = file.files[i]; i++) {
@@ -131,17 +136,17 @@ var TT_NS = (function(NS, $){
                     fr.onload = function(e) {
                         var src = e.target.result;
                         if (!NS.styleUpload.validateImg(src)) {
-                            $("#show_error").show().html(tip);
-                            $(".uploading_tips").hide();
+                            err_info_dom.show().html(tip);
+                            isloading_dom.hide();
                         }else if(!NS.styleUpload.checkSize(file.files[0])){
-                            $(".uploading_tips").hide();
-                            $("#show_error").show().html("not bigger than 100M");
+                            isloading_dom.hide();
+                            err_info_dom.show().html("not bigger than 100M");
                             NS.styleUpload.showPrvImg('/', prid);
                         } else {
                             //这里处理上传逻辑
-                            $("#show_error").hide().html("");
-                            if($("#show_error").css('display')=='none'){
-                                 NS.styleUpload.upload(src);  
+                            err_info_dom.hide().html("");
+                            if(err_info_dom.css('display')=='none'){
+                                 NS.styleUpload.upload(src,dataId,op);  
                             }
                         }
                     }
@@ -150,12 +155,12 @@ var TT_NS = (function(NS, $){
             } else { // 降级处理
                 if ( !/\.jpg$|\.png$|\.gif$/i.test(file.value) ) {
                 } else {
-                    $("#error_info").hide();
+                    op.find(".error_info").hide();
                     NS.styleUpload.showPrvImg(file.value, prid);
                 }
             }
         },
-        upload:function(data){
+        upload:function(data,dataId,op){
             // dataURL 的格式为 “data:image/png;base64,****”,
             // 逗号之前都是一些说明性的文字，我们只需要逗号之后的就行了
             console.log(data);
@@ -167,6 +172,7 @@ var TT_NS = (function(NS, $){
             };
             var blob = new Blob([ia], {type:'application/pdf'});
             var fd = new FormData();
+            fd.append(dataId,dataId)
             fd.append("upload", 1);
             fd.append('file',blob);
             $.ajax({
@@ -174,20 +180,20 @@ var TT_NS = (function(NS, $){
                 type: "POST",
                 processData: false,
                 contentType: false,
-                data: fd,
+                data:fd,
                 dataType:'json',
                 success:function(result) {
                     //console.log(result.errorCode);
-                    $(".uploading_tips").hide();
+                    op.find(".uploading_tips").hide();
                     if(result.ret == 1){
-                        $("#prvfilepath").attr("src",result.uploadFile);
-                        $(".success_info").show();
+                        op.find(".prvfilepath").attr("src",result.uploadFile);
+                        op.find(".success_info").show();
                         NS.config.isUpoad = true;
                         NS.config.uploadFile = result.uploadFile;
                     }else{
-                        $("#show_error").html('<i></i>Upload failed ,please select eligible  photos ').show();
+                        op.find(".error_info").html('<i></i>Upload failed ,please select eligible  photos ').show();
                     }
-                    $(".upload_error_info").hide();
+                    op.find(".upload_error_info").hide();
                 }
 
             });
