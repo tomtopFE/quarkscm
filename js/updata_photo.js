@@ -76,9 +76,7 @@ var TT_NS = (function(NS, $){
 
             });
             $(".Cancel").click(function(){
-
                 window.history.go(-1);
-
             });
 
             $('.bm_checkbox').click(function(){
@@ -121,7 +119,6 @@ var TT_NS = (function(NS, $){
                }else{
                     return false;
             }
-        
         },
         validateImage: function (a, prid) {//预览图片
             var file = a;
@@ -135,7 +132,9 @@ var TT_NS = (function(NS, $){
                         var src = e.target.result;
                         if (!NS.styleUpload.validateImg(src)) {
                             $("#show_error").show().html(tip);
+                            $(".uploading_tips").hide();
                         }else if(!NS.styleUpload.checkSize(file.files[0])){
+                            $(".uploading_tips").hide();
                             $("#show_error").show().html("not bigger than 100M");
                             NS.styleUpload.showPrvImg('/', prid);
                         } else {
@@ -150,7 +149,6 @@ var TT_NS = (function(NS, $){
                 }
             } else { // 降级处理
                 if ( !/\.jpg$|\.png$|\.gif$/i.test(file.value) ) {
-
                 } else {
                     $("#error_info").hide();
                     NS.styleUpload.showPrvImg(file.value, prid);
