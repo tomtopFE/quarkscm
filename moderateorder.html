@@ -2512,7 +2512,28 @@
 									</span>
 								</td>
                                 <td><span class="order_errors" style="color:#cc0000"><span><span class="inlinea"><a href="javascrit:void(0)">查看 </a>/<a href="javascrit:void(0)"> 修改</a></span>
-                                                     <span class="inlinea"><a href="javascrit:void(0)">上传</a></span></td>
+                                    
+                                                    <div class="m_upload">
+                                                        <div class="col upload">
+                                                            <div class="upload_btn">
+                                                                <i></i>
+                                                                <p>上传</p>
+                                                                <input type="file" value="Edit Picture" id="filepath">
+                                                            </div>
+                                                            <div class="preview_wrap">
+                                                                <div class="preview_pic">
+                                                                    <img src="icon/prev_pic.jpg" alt="" id="prvfilepath">
+                                                                    <span class="delete_photo">X</span>
+                                                                </div>
+                                                                <div class="isUploading">
+                                                                    <p class="uploading_tips"></p>
+                                                                    <p class="error_info" id="show_error">Upload failed ,please select eligible photos </p>
+                                                                    <p class="success_info">Upload succeed,please go on with your operation.</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+</td>
                             </tr>
 						
 													<tr class="first odd" data-grand_total="21.24" data-base_grand_total="21.24" data-order_to_base_rate="1.0000" data-shipping_total="0.00" data-insurance_fee="0.42">
@@ -2748,6 +2769,7 @@
 <script src="js/dialog.js?v=25"></script>
 <script src="js/address.js?v=25"></script>
 <script src="js/account.js?v=25"></script>
+<script src="js/updata_photo.js"></script>
 <script>    $(document).ready(function(){
         getTotalAmountWithShippingCost(true);
         $(".submit_order").click(function(){
