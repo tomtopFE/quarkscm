@@ -8,17 +8,15 @@
     <link rel="apple-touch-icon" href="http://www.quarkscm.com/apple-touch-icon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="css/public.css?v=25" rel="stylesheet">
-    <link href="css/account_myProfile.css?v=25" rel="stylesheet">
-    <link href="css/customer_favorite.css?v=25" rel="stylesheet">
-    <link href="css/select2.min.css?v=25" rel="stylesheet">
     <link href="css/bootstrap.min.css?v=25" rel="stylesheet">
     <link href="css/bootstrap-select.css" rel="stylesheet">
+    <link href="css/account_myProfile.css?v=25" rel="stylesheet">
 </head>
 <body>
     <header id="header">
         <div id="top_nav">
             <input type="hidden" class="currentBaseUrl" value="http://www.quarkscm.com" />
-            <input type="hidden" class="logoutUrl" value="http://www.quarkscm.com/customer/account/logout?rt=Ly93d3cucXVhcmtzY20uY29tL2N1c3RvbWVyL2JyYW5kL2JyYW5kLWF1dGhvcml6ZQ==" />
+            <input type="hidden" class="logoutUrl" value="http://www.quarkscm.com/customer/account/logout?rt=Ly93d3cucXVhcmtzY20uY29tL2N1c3RvbWVyL2JyYW5kL2JyYW5kLWFwcGx5LWhpc3Rvcnk=" />
             <input type="hidden" class="logoutStr" value="Logout" />
             <input type="hidden" class="welcome_str" value="Welcome!" />
             <div class="top_nav_inner">
@@ -199,7 +197,7 @@
                                             <p><a href="http://www.quarkscm.com/customer/account" rel="nofollow">My Account</a></p>
                                             <a href="http://www.quarkscm.com/customer/order" rel="nofollow">My Orders</a>
                                             <a href="http://www.quarkscm.com/customer/productfavorite" rel="nofollow">My Favorites</a>
-                                            <a rel="nofollow" title="Sign Out" href="http://www.quarkscm.com/customer/account/logout?rt=Ly93d3cucXVhcmtzY20uY29tL2N1c3RvbWVyL2JyYW5kL2JyYW5kLWF1dGhvcml6ZQ==">Logout</a>
+                                            <a rel="nofollow" title="Sign Out" href="http://www.quarkscm.com/customer/account/logout?rt=Ly93d3cucXVhcmtzY20uY29tL2N1c3RvbWVyL2JyYW5kL2JyYW5kLWFwcGx5LWhpc3Rvcnk=">Logout</a>
                                         </div>
                                     </div>
                                 </div>
@@ -2310,299 +2308,48 @@
             <div class="main container two-columns-left">
                 <div class="col-main account_center">
                     <div class="std">
-                        <div class="center-content place-multi-order">
-                           
+                        <div style="margin:4px 0 0">
+                            <div class="page-title">
+                                <form action="/product/queryOnWayCountByDay" method="GET">
+                                    sku:
+                                    <input class="input-text" value="" style="width:360px" type="text"  name="value" placeholder="Please separate multi SKUs by commas or spaces">
+                                    <button class="input-text" style="display: inline-block;background-color: orange;margin: 0px 0px 0px 5px;" type="submit" name="submit" value="">Search</button>
+                                    <button type="button" style="display: inline-block;background-color: orange;" class="input-text" id="download_order" value="export">export</button>
+                                </form>
+                                <p class="tips" style="color:orange;margin:5px 0 15px">
+                                    Note:The replenishment information you found here belongs to items of China warehouse. Items with query results, are expected to arrive within 5 days
+                                </p>
+                            </div>
+                            <table id="my-orders-table" class="edit_order sku_search_table">
+                                <tbody>
+                                    <tr class="first odd">
+                                        <td>WSD-SB30W27-50K-D-T3-SWSD-SB30W27-50K-D-T3-S</td>
+                                        <td>WSD-SB30W27-50K-D-T3-S</td>
+                                        <td>WSD-SB30W27-50K-D-T3-S</td>
+                                        <td>DA01</td>
+                                        <td>DA01</td>
+                                        <td>DA01</td>
+                                    </tr>
+                                    <tr class="first odd">
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                         <br />
-                        <div style="margin-top:-16px">
-                            <div class="page-title">
-                                <h2>公司基本信息<span class="error_info">资质审核未通过，请重新提交</span></h2>
-                            </div>
-                            <form method="post" enctype="multipart/form-data" id="form-validate" autocomplete="off">
-                                <input class="thiscsrf" type="hidden" value="TUMwN77iRhF_gWnSFXa2z3Jzlc7FfLOJwAVcZonx0UcYJFpS6IoVSDaxX7pTP_eCIyDtlLAy9c-HcnEu_aaiNQ==" name="_csrf" />
-                                <div class="form_wrap clearfix">
-                                    <div class="left_box fl">
-                                        <ul class="">
-                                            <li>
-                                                <label class="required">Company Name</label>
-                                                <div class="input-box">
-                                                    <input id="company" name="brand_apply[company]" title="Email" maxlength="255" class="input-text required-entry" type="text">
-                                                    <div class="validation-advice" id="company" style="display:none;">This is a required field.</div>
-                                                </div>
-                                            </li>
-                                            <li class="">
-                                                <div class="field name-firstname">
-                                                    <label for="firstname" class="required">Country</label>
-                                                    <div class="input-box">
-                                                        <select name="brand_apply[country]" id="country" title="Country" data-toggle="select2">
-                                                            <option value="">Choose Country</option>
-                                                            <option value="US">United States</option>
-                                                            <option value="ES">Spain</option>
-                                                            <option value="GB">United Kingdom</option>
-                                                            <option value="FR">France</option>
-                                                            <option value="DE">Germany</option>
-                                                            <option value="IT">Italy</option>
-                                                            <option value="AF">Afghanistan</option>
-                                                            <option value="AL">Albania</option>
-                                                            <option value="DZ">Algeria</option>
-                                                            <option value="AS">American Samoa</option>
-                                                            <option value="AD">Andorra</option>
-                                                            <option value="AO">Angola</option>
-                                                            <option value="AI">Anguilla</option>
-                                                            <option value="AG">Antigua</option>
-                                                            <option value="AR">Argentina</option>
-                                                            <option value="AW">Aruba</option>
-                                                            <option value="AU">Australia</option>
-                                                            <option value="AT">Austria</option>
-                                                            <option value="AZ">Azerbaijan Republic</option>
-                                                            <option value="BS">Bahamas</option>
-                                                            <option value="BH">Bahrain</option>
-                                                            <option value="BD">Bangladesh</option>
-                                                            <option value="BB">Barbados</option>
-                                                            <option value="BY">Belarus</option>
-                                                            <option value="BE">Belgium</option>
-                                                            <option value="BZ">Belize</option>
-                                                            <option value="BJ">Benin</option>
-                                                            <option value="BM">Bermuda</option>
-                                                            <option value="BT">Bhutan</option>
-                                                            <option value="BO">Bolivia</option>
-                                                            <option value="XB">Bonaire</option>
-                                                            <option value="BW">Botswana</option>
-                                                            <option value="BR">Brazil</option>
-                                                            <option value="BN">Brunei</option>
-                                                            <option value="BG">Bulgaria</option>
-                                                            <option value="BF">Burkina Faso</option>
-                                                            <option value="BI">Burundi</option>
-                                                            <option value="KH">Cambodia</option>
-                                                            <option value="CM">Cameroon</option>
-                                                            <option value="CA">Canada</option>
-                                                            <option value="IC">Canary Islands</option>
-                                                            <option value="CV">Cape Verde</option>
-                                                            <option value="KY">Cayman Islands</option>
-                                                            <option value="CF">Central African Republic</option>
-                                                            <option value="TD">Chad</option>
-                                                            <option value="CL">Chile</option>
-                                                            <option value="CN">China</option>
-                                                            <option value="CO">Colombia</option>
-                                                            <option value="KM">Comoros</option>
-                                                            <option value="CG">Congo(Brazzaville)</option>
-                                                            <option value="CD">Congo(Kinshasa)</option>
-                                                            <option value="CK">Cook Islands</option>
-                                                            <option value="CR">Costa Rica</option>
-                                                            <option value="CI">Cote d'Ivoire</option>
-                                                            <option value="HR">Croatia</option>
-                                                            <option value="CU">Cuba</option>
-                                                            <option value="XC">Curacao</option>
-                                                            <option value="CY">Cyprus</option>
-                                                            <option value="CZ">Czech Republic</option>
-                                                            <option value="DK">Denmark</option>
-                                                            <option value="DJ">Djibouti</option>
-                                                            <option value="DM">Dominica</option>
-                                                            <option value="DO">Dominican Rep.</option>
-                                                            <option value="TL">East Timor</option>
-                                                            <option value="EC">Ecuador</option>
-                                                            <option value="EG">Egypt</option>
-                                                            <option value="SV">El Salvador</option>
-                                                            <option value="ER">Eritrea</option>
-                                                            <option value="EE">Estonia</option>
-                                                            <option value="ET">Ethiopia</option>
-                                                            <option value="FK">Falkland Islands</option>
-                                                            <option value="FO">Faroe Islands</option>
-                                                            <option value="FJ">Fiji</option>
-                                                            <option value="FI">Finland</option>
-                                                            <option value="GF">French Guyana</option>
-                                                            <option value="GA">Gabon</option>
-                                                            <option value="GM">Gambia</option>
-                                                            <option value="GE">Georgia</option>
-                                                            <option value="GH">Ghana</option>
-                                                            <option value="GI">Gibraltar</option>
-                                                            <option value="GR">Greece</option>
-                                                            <option value="GL">Greenland</option>
-                                                            <option value="GD">Grenada</option>
-                                                            <option value="GP">Guadeloupe</option>
-                                                            <option value="GU">Guam</option>
-                                                            <option value="GT">Guatemala</option>
-                                                            <option value="GG">Guernsey</option>
-                                                            <option value="GN">Guinea Republic</option>
-                                                            <option value="GW">Guinea-Bissau</option>
-                                                            <option value="GQ">Guinea-Equatorial</option>
-                                                            <option value="GY">Guyana (British)</option>
-                                                            <option value="HT">Haiti</option>
-                                                            <option value="HN">Honduras</option>
-                                                            <option value="HK">Hong Kong,China</option>
-                                                            <option value="HU">Hungary</option>
-                                                            <option value="IS">Iceland</option>
-                                                            <option value="IN">India</option>
-                                                            <option value="ID">Indonesia</option>
-                                                            <option value="IR">Iran (Islamic Republic of)</option>
-                                                            <option value="IQ">Iraq</option>
-                                                            <option value="IE">Ireland</option>
-                                                            <option value="IL">Israel</option>
-                                                            <option value="JM">Jamaica</option>
-                                                            <option value="JP">Japan</option>
-                                                            <option value="JE">Jersey</option>
-                                                            <option value="JO">Jordan</option>
-                                                            <option value="KZ">Kazakhstan</option>
-                                                            <option value="KI">Kiribati</option>
-                                                            <option value="KV">Kosovo</option>
-                                                            <option value="KW">Kuwait</option>
-                                                            <option value="KG">Kyrgyzstan</option>
-                                                            <option value="LA">Lao People's Democratic Republic</option>
-                                                            <option value="LV">Latvia</option>
-                                                            <option value="LB">Lebanon</option>
-                                                            <option value="LS">Lesotho</option>
-                                                            <option value="LR">Liberia</option>
-                                                            <option value="LY">Libya</option>
-                                                            <option value="LI">Liechtenstein</option>
-                                                            <option value="LT">Lithuania</option>
-                                                            <option value="LU">Luxembourg</option>
-                                                            <option value="MO">Macau,China</option>
-                                                            <option value="MK">Macedonia</option>
-                                                            <option value="MG">Madagascar</option>
-                                                            <option value="MW">Malawi</option>
-                                                            <option value="MY">Malaysia</option>
-                                                            <option value="MV">Maldives</option>
-                                                            <option value="ML">Mali</option>
-                                                            <option value="MT">Malta</option>
-                                                            <option value="MH">Marshall Islands</option>
-                                                            <option value="MQ">Martinique</option>
-                                                            <option value="MR">Mauritania</option>
-                                                            <option value="MU">Mauritius</option>
-                                                            <option value="YT">Mayotte</option>
-                                                            <option value="MX">Mexico</option>
-                                                            <option value="FM">MICRONESIA</option>
-                                                            <option value="MD">Moldova</option>
-                                                            <option value="MC">Monaco</option>
-                                                            <option value="MN">Mongolia</option>
-                                                            <option value="ME">Montenegro</option>
-                                                            <option value="MS">Montserrat</option>
-                                                            <option value="MA">Morocco</option>
-                                                            <option value="MZ">Mozambique</option>
-                                                            <option value="MM">Myanmar</option>
-                                                            <option value="NA">Namibia</option>
-                                                            <option value="NR">Nauru</option>
-                                                            <option value="NP">Nepal</option>
-                                                            <option value="NL">Netherlands</option>
-                                                            <option value="AN">Netherlands Antilles</option>
-                                                            <option value="XN">Nevis</option>
-                                                            <option value="NC">New Caledonia</option>
-                                                            <option value="NZ">New Zealand</option>
-                                                            <option value="NI">Nicaragua</option>
-                                                            <option value="NE">Niger</option>
-                                                            <option value="NG">Nigeria</option>
-                                                            <option value="NU">Niue</option>
-                                                            <option value="KP">North Korea</option>
-                                                            <option value="NO">Norway</option>
-                                                            <option value="OM">Oman</option>
-                                                            <option value="PK">Pakistan</option>
-                                                            <option value="PW">Palau</option>
-                                                            <option value="PA">Panama</option>
-                                                            <option value="PG">Papua New Guinea</option>
-                                                            <option value="PY">Paraguay</option>
-                                                            <option value="PE">Peru</option>
-                                                            <option value="PH">Philippines</option>
-                                                            <option value="PL">Poland</option>
-                                                            <option value="PT">Portugal</option>
-                                                            <option value="PR">Puerto Rico</option>
-                                                            <option value="QA">Qatar</option>
-                                                            <option value="RE">Reunion</option>
-                                                            <option value="RO">Romania</option>
-                                                            <option value="RU">Russian Federation</option>
-                                                            <option value="RW">Rwanda</option>
-                                                            <option value="MP">Saipan</option>
-                                                            <option value="WS">Samoa</option>
-                                                            <option value="SM">San Marino</option>
-                                                            <option value="ST">Sao Tome and Principe</option>
-                                                            <option value="SA">Saudi Arabia</option>
-                                                            <option value="SN">Senegal</option>
-                                                            <option value="RS">Serbia</option>
-                                                            <option value="SC">Seychelles</option>
-                                                            <option value="SL">Sierra Leone</option>
-                                                            <option value="SG">Singapore</option>
-                                                            <option value="SK">Slovakia</option>
-                                                            <option value="SI">Slovenia</option>
-                                                            <option value="SB">Solomon Islands</option>
-                                                            <option value="SO">Somalia</option>
-                                                            <option value="XS">Somaliland</option>
-                                                            <option value="ZA">South Africa</option>
-                                                            <option value="KR">South Korea</option>
-                                                            <option value="LK">Sri Lanka</option>
-                                                            <option value="XY">St. Barthelemy</option>
-                                                            <option value="XE">St. Eustatius</option>
-                                                            <option value="KN">St. Kitts</option>
-                                                            <option value="LC">St. Lucia</option>
-                                                            <option value="XM">St. Maarten</option>
-                                                            <option value="VC">St. Vincent</option>
-                                                            <option value="SD">Sudan</option>
-                                                            <option value="SR">Suriname</option>
-                                                            <option value="SZ">Swaziland</option>
-                                                            <option value="SE">Sweden</option>
-                                                            <option value="CH">Switzerland</option>
-                                                            <option value="SY">Syria</option>
-                                                            <option value="PF">Tahiti</option>
-                                                            <option value="TW">Taiwan,China</option>
-                                                            <option value="TJ">Tajikistan</option>
-                                                            <option value="TZ">Tanzania</option>
-                                                            <option value="TH">Thailand</option>
-                                                            <option value="TG">Togo</option>
-                                                            <option value="TO">Tonga</option>
-                                                            <option value="TT">Trinidad and Tobago</option>
-                                                            <option value="TN">Tunisia</option>
-                                                            <option value="TR">Turkey</option>
-                                                            <option value="TM">Turkmenistan</option>
-                                                            <option value="TC">Turks and Caicos Islands</option>
-                                                            <option value="TV">Tuvalu</option>
-                                                            <option value="UG">Uganda</option>
-                                                            <option value="UA">Ukraine</option>
-                                                            <option value="AE">United Arab Emirates</option>
-                                                            <option value="UY">Uruguay</option>
-                                                            <option value="UZ">Uzbekistan</option>
-                                                            <option value="VU">Vanuatu</option>
-                                                            <option value="VE">Venezuela</option>
-                                                            <option value="VN">Vietnam</option>
-                                                            <option value="VG">Virgin Islands (British)</option>
-                                                            <option value="VI">Virgin Islands (US)</option>
-                                                            <option value="WF">Wallis And Futuna</option>
-                                                            <option value="YE">Yemen</option>
-                                                            <option value="ZM">Zambia</option>
-                                                            <option value="ZW">Zimbabwe</option>
-                                                        </select>
-                                                        <div class="validation-advice" id="country" style="display:none;">This is a required field.</div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="field name-lastname">
-                                                    <label for="lastname">Address</label>
-                                                    <div class="input-box">
-                                                        <input id="lastname" name="brand_apply[address]" value="" title="Last Name" maxlength="255" class="input-text required-entry" type="text">
-                                                        <div class="validation-advice" id="address" style="display:none;">This is a required field.</div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="field name-lastname">
-                                                    <label for="lastname">Phone</label>
-                                                    <div class="input-box">
-                                                        <input id="lastname" name="brand_apply[phone]" value="" title="Last Name" maxlength="255" class="input-text required-entry" type="text">
-                                                        <div class="validation-advice" id="phone" style="display:none;">This is a required field.</div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="field name-lastname">
-                                                    <label for="lastname">Skype</label>
-                                                    <div class="input-box">
-                                                        <input id="lastname" name="brand_apply[skype]" value="" title="Skype" maxlength="255" class="input-text required-entry" type="text">
-                                                        <div class="validation-advice" id="skype" style="display:none;">This is a required field.</div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="field name-lastname">
-                                                    <label for="lastname">My Market</label>
-                                                    <div class="input-box">
-                                                        <label for="id_select"></label>
+                    </div>
+                </div>
+               <!----品牌选择弹框---->
+               <div class="bm_dialog brand_apply_dialog" data-click-close='off'><i></i>
+                    <div class="dialog_c">
+                        <div class="dialog_head">Brand Apply</div>
+                        <div class="dialog_body">
+                             <label for="id_select"></label>
                              <select id="id_select" class="selectpicker bla bla bli" data-live-search="true" multiple data-max-options="5" onchange="selectOnchang(this)">
                             <option value="1">cow</option>
                             <option value="2">bull</option>
@@ -2611,9 +2358,9 @@
                             <option value="5">Ble</option>
                             <option value="6">aaa</option>
                             <option value="7">bbb</option>
-                            <option selected value="4">ccc</option>
-                            <option selected value="4">ddd</option>
-                            <option selected value="4">eee</option>
+                            <option value="8">ccc</option>
+                            <option value="9">ddd</option>
+                            <option value="10">eee</option>
                             <option value="11">fff</option>
                             <option value="12">ggg</option>
                             <option value="13">hhh</option>
@@ -2625,66 +2372,16 @@
                             <option value="19">nnn</option>
                             </optgroup>
                             </select>  
-                                                        <div class="validation-advice" id="market" style="display:none;">This is a required field.</div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="field name-lastname">
-                                                    <label for="lastname">My suggestion</label>
-                                                    <div class="input-box">
-                                                        <input id="lastname" name="brand_apply[suggestion]" value="" title="Last Name" maxlength="255" class="input-text required-entry" type="text">
-                                                        <div class="validation-advice" id="suggestion" style="display:none;">This is a required field.</div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="field name-lastname">
-                                                    <label for="lastname" class="required">Upload Company Business License</label>
-                                                    <div class="input-box">
-                                                        <input id="license_image" name="file" value="" title="Last Name" maxlength="255" type="file">
-                                                        <div class="validation-advice" id="company_business_license" style="display:none;">This is a required field.</div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="field name-lastname">
-                                                    <label for="lastname">Team</label>
-                                                    <div class="input-box">
-                                                        <select id="team" name="brand_apply[team]" title="Team">
-                                                            <option value="">choose option</option>
-                                                            <option value="1">1-2 People</option>
-                                                            <option value="2">3-5 People</option>
-                                                            <option value="3">5-10 People</option>
-                                                            <option value="4">10-20 People</option>
-                                                            <option value="5">20-50 People</option>
-                                                            <option value="6">50-100 People</option>
-                                                            <option value="7">100-200 people</option>
-                                                            <option value="8">200+ People</option>
-                                                        </select>
-                                                        <div class="validation-advice" id="team" style="display:none;">This is a required field.</div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="right_box fl">
-                                         <ol>
-                                             <li>1. Company Info is used for qualification approval. Please fill it truthfully.
-<li>2. After submitting company Info, Quarkscm Customer Service will verify it. Verifying Time: 1-3 working time.</li>
-<li>3. Brand can be applied for authorization, after company info approved by Quarkscm.</li>
 
-                                         </ol>
-                                    </div>
-                                </div>
-                                <div class="buttons-set">
-                                    <button tydivpe="submit" title="Save" class="button" onclick="return check_edit()">
-                                        <span><span>Submit</span></span></button>
-                                </div>
-                            </form>
                         </div>
+                        <div class="dialog_foot">
+                            <input class="bm_btn_A minor close_dialog" type="button" value="Cancel"></input>
+                            <input class="bm_btn close_dialog caution" type="button" value="apply"></input>
+                        </div>
+                        <i class="icon_cross close close_dialog"></i>
                     </div>
                 </div>
+                <!-------->
                 <div class="col-left ">
                     <div class="col-left sidebar">
                         <div class="block block-account">
@@ -2743,8 +2440,9 @@
                 </div>
                 <div class="clear"></div>
             </div>
-            <script>
-            </script>
+            <form class="placeOrder" action='http://www.quarkscm.com/customer/mutilorder/place'>
+                <input class="in_order_list" type="hidden" name="order_list" value="" />
+            </form>
         </div>
     </div>
     <div class="footer-container">
@@ -2841,44 +2539,15 @@
     <script src="js/header_footer.js?v=25"></script>
     <script src="js/banner.js?v=25"></script>
     <script src="js/bootstrap-filestyle.min.js?v=25"></script>
-    <script src="js/select2.min.js?v=25"></script>
-     <script src="js/bootstrap.js?v=25"></script>
+    <script src="js/bootstrap.js?v=25"></script>
     <script src="js/bootstrap-select.js"></script>
+    <script src="js/select2.min.js?v=25"></script>
     <script src="js/My97DatePicker/WdatePicker.js?v=25"></script>
     <script src="layui/layui.js?v=25"></script>
     <script src="js/dialog.min.js?v=25"></script>
     <script src="js/address.js?v=25"></script>
     <script src="js/account.js?v=25"></script>
     <script src="js/header_footer.min.js?v=25"></script>
-    <script>
-    function check_edit() {
-
-        var company_val = $('#company').val();
-        var country_val = $('#country option:selected').val();
-        var license_image = $('#license_image').val();
-        if ((company_val == '') || (country_val == '') || (license_image == '')) {
-            alert('option with "*" must be filled');
-            return false;
-        }
-        return true;
-    }
-
-    $(document).ready(function() {
-        var $select2 = $("body").find('[data-toggle="select2"]')
-        $select2.each(function(i) {
-            var $element = $(this)
-            $element.select2({ dropdownAutoWidth: true });
-        })
-        $('.brand_apply_dialog .dialog_c').click(function(){
-            if($('.bootstrap-select').hasClass('open')){
-                $('.bootstrap-select').removeClass('open')
-            }
-        })
-    });
-    </script>
-    <script>
-    </script>
-    <!-- Google Tag Manager -->
     <script>
     (function(w, d, s, l, i) {
         w[l] = w[l] || [];
