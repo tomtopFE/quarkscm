@@ -2668,12 +2668,11 @@ body {
     line-height: 14px;
     margin-right: 5px
 }
-
 ul#ship_address_ul {
-    min-height: 160px;
-
+    height:360px;
+    width:90%;
+    overflow:scroll;
 }
-
 .ns_address_list:after {
     content: ".";
     display: block;
