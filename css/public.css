@@ -2138,9 +2138,8 @@ td:nth-child(2n) {
 
 .edit_order tr td {
     background: #fff none repeat scroll 0 0;
+    text-align: center;
 }
-
-
 
 .review_description_left a span {
     display: block;
