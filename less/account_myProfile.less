@@ -5755,21 +5755,30 @@ table.sku_search_table td {
 	margin-bottom: 40px;
 
 	.question {
-		padding-right: 30px;
+		padding: 10px 30px 20px 0;
 		box-sizing: border-box;
 		border-right: 1px solid #ddd;
+
+		&>div {
+			margin-bottom: 10px;
+		}
 	}
 
 	.answer {
 		padding-left: 30px;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		&>div {
+			margin-bottom: 10px;
+		}
 	}
 
 	li {
-		padding: 10px 0 20px;
 		color: #666;
 		font-size: 14px;
 		display: flex;
-		border-bottom: 1px dashed #ddd;
+
 		&:last-child {
 			border: none
 		}
