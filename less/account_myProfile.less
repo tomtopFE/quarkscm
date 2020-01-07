@@ -5754,22 +5754,25 @@ table.sku_search_table td {
 	width: 90%;
 	margin-bottom: 40px;
 
-	.fl {
+	.question {
 		padding-right: 30px;
 		box-sizing: border-box;
 		border-right: 1px solid #ddd;
 	}
 
-	.fr {
-		display: flex;
-		align-items: center;
+	.answer {
 		padding-left: 30px;
 	}
 
 	li {
-		padding: 10px 0 30px;
+		padding: 10px 0 20px;
 		color: #666;
 		font-size: 14px;
+		display: flex;
+		border-bottom: 1px dashed #ddd;
+		&:last-child {
+			border: none
+		}
 
 		p {
 			text-indent: 2em;
