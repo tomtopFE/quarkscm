@@ -5769,6 +5769,7 @@ table.sku_search_table td {
 		display: flex;
 		justify-content: center;
 		flex-direction: column;
+
 		&>div {
 			margin-bottom: 10px;
 		}
@@ -5795,4 +5796,39 @@ table.sku_search_table td {
 
 #reply_content {
 	width: 90%;
+}
+
+.sku_update_info {
+	th {
+		border-bottom: 0 !important;
+		border-left: 1px solid #ccc;
+		font-weight: bold;
+	}
+
+	a {
+		color: blue;
+
+		&:hover {
+			text-decoration: underline;
+		}
+
+		&.has_red {
+			color: #666
+		}
+	}
+}
+
+.sku_update_info_detail {
+	table {
+		border: none
+	}
+
+	td {
+		border: none;
+		color: blue
+	}
+}
+
+.page-title .fr {
+	float: right
 }
